@@ -1,0 +1,11 @@
+
+{
+  "@@locale": "pt",
+  "loginTitle": "Login",
+  "loginEmail": "E-mail",
+  "loginPassword": "Senha",
+  "loginSubmit": "Entrar",
+  "loginForgotPassword": "Esqueceu sua senha?",
+  "loginNoAccount": "Não tem uma conta?",
+  "loginRegister": "Cadastre-se"
+}

@@ -1,0 +1,11 @@
+
+{
+  "@@locale": "es",
+  "loginTitle": "Iniciar sesión",
+  "loginEmail": "Correo electrónico",
+  "loginPassword": "Contraseña",
+  "loginSubmit": "Entrar",
+  "loginForgotPassword": "¿Olvidaste tu contraseña?",
+  "loginNoAccount": "¿No tienes una cuenta?",
+  "loginRegister": "Regístrate"
+}
