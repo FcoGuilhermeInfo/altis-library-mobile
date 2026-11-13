@@ -54,4 +54,78 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get loginUserSuccess => 'Autenticado como locatário.';
+
+  @override
+  String get registerTitle => 'Cadastro';
+
+  @override
+  String get registerName => 'Nome Completo';
+
+  @override
+  String get registerBirthDate => 'Data de Nascimento';
+
+  @override
+  String get registerCpf => 'CPF';
+
+  @override
+  String get registerPhone => 'Telefone';
+
+  @override
+  String get registerAddress => 'Endereço';
+
+  @override
+  String get registerEmail => 'E-mail';
+
+  @override
+  String get registerPassword => 'Senha';
+
+  @override
+  String get registerConfirmPassword => 'Confirmar Senha';
+
+  @override
+  String get registerSubmit => 'Entrar';
+
+  @override
+  String get registerBackToLogin => 'Já tem uma conta?';
+
+  @override
+  String get registerRequired => 'Este campo é obrigatório';
+
+  @override
+  String get registerInvalidCpf => 'O CPF deve conter 11 dígitos';
+
+  @override
+  String get registerInvalidPhone => 'Informe um celular com DDD e 11 dígitos';
+
+  @override
+  String get registerInvalidDate => 'Informe uma data de nascimento válida';
+
+  @override
+  String get registerInvalidEmail => 'Informe um e-mail válido do Gmail';
+
+  @override
+  String get registerInvalidPassword =>
+      'A senha deve ter entre 8 e 15 caracteres';
+
+  @override
+  String get registerPasswordMismatch => 'As senhas não coincidem';
+
+  @override
+  String get registerSuccess =>
+      'Cadastro realizado com sucesso! Faça seu login.';
+
+  @override
+  String get registerInvalidData =>
+      'Verifique os dados informados e tente novamente.';
+
+  @override
+  String get registerForbidden =>
+      'O cadastro não está disponível sem autorização.';
+
+  @override
+  String get registerConflict => 'Já existe um cadastro com esses dados.';
+
+  @override
+  String get registerServerError =>
+      'Não foi possível realizar o cadastro. Tente novamente.';
 }

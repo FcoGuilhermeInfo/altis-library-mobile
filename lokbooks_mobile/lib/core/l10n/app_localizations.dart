@@ -189,6 +189,144 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Autenticado como locatário.'**
   String get loginUserSuccess;
+
+  /// No description provided for @registerTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Cadastro'**
+  String get registerTitle;
+
+  /// No description provided for @registerName.
+  ///
+  /// In pt, this message translates to:
+  /// **'Nome Completo'**
+  String get registerName;
+
+  /// No description provided for @registerBirthDate.
+  ///
+  /// In pt, this message translates to:
+  /// **'Data de Nascimento'**
+  String get registerBirthDate;
+
+  /// No description provided for @registerCpf.
+  ///
+  /// In pt, this message translates to:
+  /// **'CPF'**
+  String get registerCpf;
+
+  /// No description provided for @registerPhone.
+  ///
+  /// In pt, this message translates to:
+  /// **'Telefone'**
+  String get registerPhone;
+
+  /// No description provided for @registerAddress.
+  ///
+  /// In pt, this message translates to:
+  /// **'Endereço'**
+  String get registerAddress;
+
+  /// No description provided for @registerEmail.
+  ///
+  /// In pt, this message translates to:
+  /// **'E-mail'**
+  String get registerEmail;
+
+  /// No description provided for @registerPassword.
+  ///
+  /// In pt, this message translates to:
+  /// **'Senha'**
+  String get registerPassword;
+
+  /// No description provided for @registerConfirmPassword.
+  ///
+  /// In pt, this message translates to:
+  /// **'Confirmar Senha'**
+  String get registerConfirmPassword;
+
+  /// No description provided for @registerSubmit.
+  ///
+  /// In pt, this message translates to:
+  /// **'Entrar'**
+  String get registerSubmit;
+
+  /// No description provided for @registerBackToLogin.
+  ///
+  /// In pt, this message translates to:
+  /// **'Já tem uma conta?'**
+  String get registerBackToLogin;
+
+  /// No description provided for @registerRequired.
+  ///
+  /// In pt, this message translates to:
+  /// **'Este campo é obrigatório'**
+  String get registerRequired;
+
+  /// No description provided for @registerInvalidCpf.
+  ///
+  /// In pt, this message translates to:
+  /// **'O CPF deve conter 11 dígitos'**
+  String get registerInvalidCpf;
+
+  /// No description provided for @registerInvalidPhone.
+  ///
+  /// In pt, this message translates to:
+  /// **'Informe um celular com DDD e 11 dígitos'**
+  String get registerInvalidPhone;
+
+  /// No description provided for @registerInvalidDate.
+  ///
+  /// In pt, this message translates to:
+  /// **'Informe uma data de nascimento válida'**
+  String get registerInvalidDate;
+
+  /// No description provided for @registerInvalidEmail.
+  ///
+  /// In pt, this message translates to:
+  /// **'Informe um e-mail válido do Gmail'**
+  String get registerInvalidEmail;
+
+  /// No description provided for @registerInvalidPassword.
+  ///
+  /// In pt, this message translates to:
+  /// **'A senha deve ter entre 8 e 15 caracteres'**
+  String get registerInvalidPassword;
+
+  /// No description provided for @registerPasswordMismatch.
+  ///
+  /// In pt, this message translates to:
+  /// **'As senhas não coincidem'**
+  String get registerPasswordMismatch;
+
+  /// No description provided for @registerSuccess.
+  ///
+  /// In pt, this message translates to:
+  /// **'Cadastro realizado com sucesso! Faça seu login.'**
+  String get registerSuccess;
+
+  /// No description provided for @registerInvalidData.
+  ///
+  /// In pt, this message translates to:
+  /// **'Verifique os dados informados e tente novamente.'**
+  String get registerInvalidData;
+
+  /// No description provided for @registerForbidden.
+  ///
+  /// In pt, this message translates to:
+  /// **'O cadastro não está disponível sem autorização.'**
+  String get registerForbidden;
+
+  /// No description provided for @registerConflict.
+  ///
+  /// In pt, this message translates to:
+  /// **'Já existe um cadastro com esses dados.'**
+  String get registerConflict;
+
+  /// No description provided for @registerServerError.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível realizar o cadastro. Tente novamente.'**
+  String get registerServerError;
 }
 
 class _AppLocalizationsDelegate

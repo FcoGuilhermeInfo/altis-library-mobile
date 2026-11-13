@@ -53,4 +53,79 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get loginUserSuccess => 'Signed in as library member.';
+
+  @override
+  String get registerTitle => 'Register';
+
+  @override
+  String get registerName => 'Full name';
+
+  @override
+  String get registerBirthDate => 'Date of birth';
+
+  @override
+  String get registerCpf => 'CPF';
+
+  @override
+  String get registerPhone => 'Phone number';
+
+  @override
+  String get registerAddress => 'Address';
+
+  @override
+  String get registerEmail => 'Email';
+
+  @override
+  String get registerPassword => 'Password';
+
+  @override
+  String get registerConfirmPassword => 'Confirm Password';
+
+  @override
+  String get registerSubmit => 'Sign in';
+
+  @override
+  String get registerBackToLogin => 'Already have an account?';
+
+  @override
+  String get registerRequired => 'This field is required';
+
+  @override
+  String get registerInvalidCpf => 'CPF must contain 11 digits';
+
+  @override
+  String get registerInvalidPhone =>
+      'Enter an 11-digit mobile number with area code';
+
+  @override
+  String get registerInvalidDate => 'Enter a valid date of birth';
+
+  @override
+  String get registerInvalidEmail => 'Enter a valid Gmail address';
+
+  @override
+  String get registerInvalidPassword =>
+      'Password must contain 8 to 15 characters';
+
+  @override
+  String get registerPasswordMismatch => 'Passwords do not match';
+
+  @override
+  String get registerSuccess => 'Registration successful! Please sign in.';
+
+  @override
+  String get registerInvalidData =>
+      'Check the information provided and try again.';
+
+  @override
+  String get registerForbidden =>
+      'Registration is not available without authorization.';
+
+  @override
+  String get registerConflict =>
+      'An account with this information already exists.';
+
+  @override
+  String get registerServerError =>
+      'Could not complete registration. Please try again.';
 }

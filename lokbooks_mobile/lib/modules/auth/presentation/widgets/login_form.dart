@@ -1,15 +1,18 @@
-
 import 'package:flutter/material.dart';
 
-import '../../../core/l10n/app_localizations.dart';
-import '../../../core/services/storage/token_storage.dart';
-import '../models/login_request.dart';
-import '../models/user_role.dart';
-import '../services/auth_service.dart';
-import '../services/jwt_service.dart';
+import 'package:lokbooks_mobile/core/l10n/app_localizations.dart';
+import 'package:lokbooks_mobile/modules/auth/controllers/auth_controller.dart';
+import 'package:lokbooks_mobile/modules/auth/models/login_request.dart';
+import 'package:lokbooks_mobile/modules/auth/models/user_role.dart';
+import 'package:lokbooks_mobile/modules/auth/services/auth_service.dart';
 
 class LoginForm extends StatefulWidget {
-  const LoginForm({super.key});
+  final AuthController authController;
+
+  const LoginForm({
+    super.key,
+    required this.authController,
+  });
 
   @override
   State<LoginForm> createState() => _LoginFormState();
@@ -20,10 +23,6 @@ class _LoginFormState extends State<LoginForm> {
 
   final _emailController = TextEditingController();
   final _passwordController = TextEditingController();
-
-  final _authService = AuthService();
-  final _jwtService = JwtService();
-  final _tokenStorage = const TokenStorage();
 
   bool _obscurePassword = true;
   bool _isLoading = false;
@@ -43,11 +42,7 @@ class _LoginFormState extends State<LoginForm> {
         password: _passwordController.text,
       );
 
-      final response = await _authService.login(request);
-
-      final role = _jwtService.extractRole(response.token);
-
-      await _tokenStorage.saveToken(response.token);
+      final role = await widget.authController.login(request);
 
       if (!mounted) return;
 
