@@ -7,5 +7,13 @@
   "loginSubmit": "Sign in",
   "loginForgotPassword": "Forgot your password?",
   "loginNoAccount": "Don't have an account?",
-  "loginRegister": "Sign up"
+  "loginRegister": "Sign up",
+  "loginEmailRequired": "Enter your email",
+  "loginEmailInvalid": "Enter a valid email address",
+  "loginPasswordRequired": "Enter your password",
+  "loginInvalidCredentials": "Invalid email or password.",
+  "loginConnectionError": "Could not connect to the server.",
+  "loginServerError": "Could not sign in. Please try again.",
+  "loginAdminSuccess": "Signed in as administrator.",
+  "loginUserSuccess": "Signed in as library member."
 }

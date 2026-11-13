@@ -1,8 +1,9 @@
 
 import 'package:flutter/material.dart';
 
+import 'core/l10n/app_localizations.dart';
 import 'core/theme/app_theme.dart';
-import 'core/widgets/app_header.dart';
+import 'modules/auth/pages/login_page.dart';
 
 void main() {
   runApp(const LokBooksApp());
@@ -17,9 +18,11 @@ class LokBooksApp extends StatelessWidget {
       title: 'LokBooks',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
-      home: const Scaffold(
-        appBar: AppHeader(),
-      ),
+      locale: const Locale('pt'),
+      localizationsDelegates:
+          AppLocalizations.localizationsDelegates,
+      supportedLocales: AppLocalizations.supportedLocales,
+      home: const LoginPage(),
     );
   }
 }

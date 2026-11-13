@@ -141,6 +141,54 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Cadastre-se'**
   String get loginRegister;
+
+  /// No description provided for @loginEmailRequired.
+  ///
+  /// In pt, this message translates to:
+  /// **'Informe seu e-mail'**
+  String get loginEmailRequired;
+
+  /// No description provided for @loginEmailInvalid.
+  ///
+  /// In pt, this message translates to:
+  /// **'Informe um e-mail válido'**
+  String get loginEmailInvalid;
+
+  /// No description provided for @loginPasswordRequired.
+  ///
+  /// In pt, this message translates to:
+  /// **'Informe sua senha'**
+  String get loginPasswordRequired;
+
+  /// No description provided for @loginInvalidCredentials.
+  ///
+  /// In pt, this message translates to:
+  /// **'E-mail ou senha inválidos.'**
+  String get loginInvalidCredentials;
+
+  /// No description provided for @loginConnectionError.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível conectar ao servidor.'**
+  String get loginConnectionError;
+
+  /// No description provided for @loginServerError.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível realizar o login. Tente novamente.'**
+  String get loginServerError;
+
+  /// No description provided for @loginAdminSuccess.
+  ///
+  /// In pt, this message translates to:
+  /// **'Autenticado como administrador.'**
+  String get loginAdminSuccess;
+
+  /// No description provided for @loginUserSuccess.
+  ///
+  /// In pt, this message translates to:
+  /// **'Autenticado como locatário.'**
+  String get loginUserSuccess;
 }
 
 class _AppLocalizationsDelegate

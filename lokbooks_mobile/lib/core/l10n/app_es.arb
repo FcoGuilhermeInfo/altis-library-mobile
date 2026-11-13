@@ -7,5 +7,13 @@
   "loginSubmit": "Entrar",
   "loginForgotPassword": "¿Olvidaste tu contraseña?",
   "loginNoAccount": "¿No tienes una cuenta?",
-  "loginRegister": "Regístrate"
+  "loginRegister": "Regístrate",
+  "loginEmailRequired": "Introduce tu correo electrónico",
+  "loginEmailInvalid": "Introduce un correo electrónico válido",
+  "loginPasswordRequired": "Introduce tu contraseña",
+  "loginInvalidCredentials": "Correo o contraseña incorrectos.",
+  "loginConnectionError": "No se pudo conectar con el servidor.",
+  "loginServerError": "No se pudo iniciar sesión. Inténtalo de nuevo.",
+  "loginAdminSuccess": "Sesión iniciada como administrador.",
+  "loginUserSuccess": "Sesión iniciada como usuario de la biblioteca."
 }

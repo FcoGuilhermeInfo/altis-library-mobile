@@ -29,4 +29,28 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get loginRegister => 'Sign up';
+
+  @override
+  String get loginEmailRequired => 'Enter your email';
+
+  @override
+  String get loginEmailInvalid => 'Enter a valid email address';
+
+  @override
+  String get loginPasswordRequired => 'Enter your password';
+
+  @override
+  String get loginInvalidCredentials => 'Invalid email or password.';
+
+  @override
+  String get loginConnectionError => 'Could not connect to the server.';
+
+  @override
+  String get loginServerError => 'Could not sign in. Please try again.';
+
+  @override
+  String get loginAdminSuccess => 'Signed in as administrator.';
+
+  @override
+  String get loginUserSuccess => 'Signed in as library member.';
 }

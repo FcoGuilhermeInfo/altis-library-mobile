@@ -29,4 +29,30 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get loginRegister => 'Regístrate';
+
+  @override
+  String get loginEmailRequired => 'Introduce tu correo electrónico';
+
+  @override
+  String get loginEmailInvalid => 'Introduce un correo electrónico válido';
+
+  @override
+  String get loginPasswordRequired => 'Introduce tu contraseña';
+
+  @override
+  String get loginInvalidCredentials => 'Correo o contraseña incorrectos.';
+
+  @override
+  String get loginConnectionError => 'No se pudo conectar con el servidor.';
+
+  @override
+  String get loginServerError =>
+      'No se pudo iniciar sesión. Inténtalo de nuevo.';
+
+  @override
+  String get loginAdminSuccess => 'Sesión iniciada como administrador.';
+
+  @override
+  String get loginUserSuccess =>
+      'Sesión iniciada como usuario de la biblioteca.';
 }
