@@ -128,4 +128,49 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get registerServerError =>
       'Could not complete registration. Please try again.';
+
+  @override
+  String get forgotPasswordTitle => 'Recover Password';
+
+  @override
+  String get forgotPasswordDescription =>
+      'Enter your registered email address and CPF to continue.';
+
+  @override
+  String get forgotPasswordSubmit => 'Continue';
+
+  @override
+  String get forgotPasswordInvalidCredentials =>
+      'We could not verify the information provided.';
+
+  @override
+  String get forgotPasswordInvalidData =>
+      'Check the email address and CPF provided.';
+
+  @override
+  String get passwordResetTooManyRequests =>
+      'Too many attempts. Wait and try again.';
+
+  @override
+  String get resetPasswordTitle => 'Change Password';
+
+  @override
+  String get resetPasswordDescription => 'Enter and confirm your new password.';
+
+  @override
+  String get resetPasswordNewPassword => 'New Password';
+
+  @override
+  String get resetPasswordSubmit => 'Change';
+
+  @override
+  String get resetPasswordInvalidToken =>
+      'Your recovery session has expired or the token is invalid. Please request a new one.';
+
+  @override
+  String get resetPasswordInvalidData => 'Check your new password information.';
+
+  @override
+  String get resetPasswordSuccess =>
+      'Password reset successfully! Please sign in.';
 }

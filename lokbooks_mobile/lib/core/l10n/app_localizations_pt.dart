@@ -128,4 +128,50 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get registerServerError =>
       'Não foi possível realizar o cadastro. Tente novamente.';
+
+  @override
+  String get forgotPasswordTitle => 'Recuperar Senha';
+
+  @override
+  String get forgotPasswordDescription =>
+      'Informe seu e-mail e CPF cadastrados para continuar.';
+
+  @override
+  String get forgotPasswordSubmit => 'Continuar';
+
+  @override
+  String get forgotPasswordInvalidCredentials =>
+      'Não foi possível confirmar os dados informados.';
+
+  @override
+  String get forgotPasswordInvalidData =>
+      'Verifique o e-mail e o CPF informados.';
+
+  @override
+  String get passwordResetTooManyRequests =>
+      'Muitas tentativas. Aguarde e tente novamente.';
+
+  @override
+  String get resetPasswordTitle => 'Alterar Senha';
+
+  @override
+  String get resetPasswordDescription =>
+      'Digite sua nova senha e confirme para finalizar.';
+
+  @override
+  String get resetPasswordNewPassword => 'Nova Senha';
+
+  @override
+  String get resetPasswordSubmit => 'Alterar';
+
+  @override
+  String get resetPasswordInvalidToken =>
+      'O prazo de recuperação expirou ou o token é inválido. Solicite novamente.';
+
+  @override
+  String get resetPasswordInvalidData => 'Verifique os dados da nova senha.';
+
+  @override
+  String get resetPasswordSuccess =>
+      'Senha redefinida com sucesso! Faça seu login.';
 }

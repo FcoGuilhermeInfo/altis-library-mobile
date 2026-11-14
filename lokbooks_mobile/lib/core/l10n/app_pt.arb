@@ -38,5 +38,18 @@
   "registerInvalidData": "Verifique os dados informados e tente novamente.",
   "registerForbidden": "O cadastro não está disponível sem autorização.",
   "registerConflict": "Já existe um cadastro com esses dados.",
-  "registerServerError": "Não foi possível realizar o cadastro. Tente novamente."
+  "registerServerError": "Não foi possível realizar o cadastro. Tente novamente.",
+  "forgotPasswordTitle": "Recuperar Senha",
+  "forgotPasswordDescription": "Informe seu e-mail e CPF cadastrados para continuar.",
+  "forgotPasswordSubmit": "Continuar",
+  "forgotPasswordInvalidCredentials": "Não foi possível confirmar os dados informados.",
+  "forgotPasswordInvalidData": "Verifique o e-mail e o CPF informados.",
+  "passwordResetTooManyRequests": "Muitas tentativas. Aguarde e tente novamente.",
+  "resetPasswordTitle": "Alterar Senha",
+  "resetPasswordDescription": "Digite sua nova senha e confirme para finalizar.",
+  "resetPasswordNewPassword": "Nova Senha",
+  "resetPasswordSubmit": "Alterar",
+  "resetPasswordInvalidToken": "O prazo de recuperação expirou ou o token é inválido. Solicite novamente.",
+  "resetPasswordInvalidData": "Verifique os dados da nova senha.",
+  "resetPasswordSuccess": "Senha redefinida com sucesso! Faça seu login."
 }

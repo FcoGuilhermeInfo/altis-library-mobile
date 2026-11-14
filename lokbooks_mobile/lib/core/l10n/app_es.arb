@@ -38,5 +38,18 @@
   "registerInvalidData": "Comprueba los datos e inténtalo de nuevo.",
   "registerForbidden": "El registro no está disponible sin autorización.",
   "registerConflict": "Ya existe una cuenta con estos datos.",
-  "registerServerError": "No se pudo completar el registro. Inténtalo de nuevo."
+  "registerServerError": "No se pudo completar el registro. Inténtalo de nuevo.",
+  "forgotPasswordTitle": "Recuperar Contraseña",
+  "forgotPasswordDescription": "Introduce tu correo y CPF registrados para continuar.",
+  "forgotPasswordSubmit": "Continuar",
+  "forgotPasswordInvalidCredentials": "No pudimos verificar los datos proporcionados.",
+  "forgotPasswordInvalidData": "Comprueba el correo y CPF introducidos.",
+  "passwordResetTooManyRequests": "Demasiados intentos. Espera e inténtalo de nuevo.",
+  "resetPasswordTitle": "Cambiar Contraseña",
+  "resetPasswordDescription": "Introduce y confirma tu nueva contraseña.",
+  "resetPasswordNewPassword": "Nueva Contraseña",
+  "resetPasswordSubmit": "Cambiar",
+  "resetPasswordInvalidToken": "La sesión de recuperación ha caducado o el token no es válido. Solicita uno nuevo.",
+  "resetPasswordInvalidData": "Comprueba los datos de la nueva contraseña.",
+  "resetPasswordSuccess": "¡Contraseña restablecida correctamente! Inicia sesión."
 }

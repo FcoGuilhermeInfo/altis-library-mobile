@@ -128,4 +128,51 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get registerServerError =>
       'No se pudo completar el registro. Inténtalo de nuevo.';
+
+  @override
+  String get forgotPasswordTitle => 'Recuperar Contraseña';
+
+  @override
+  String get forgotPasswordDescription =>
+      'Introduce tu correo y CPF registrados para continuar.';
+
+  @override
+  String get forgotPasswordSubmit => 'Continuar';
+
+  @override
+  String get forgotPasswordInvalidCredentials =>
+      'No pudimos verificar los datos proporcionados.';
+
+  @override
+  String get forgotPasswordInvalidData =>
+      'Comprueba el correo y CPF introducidos.';
+
+  @override
+  String get passwordResetTooManyRequests =>
+      'Demasiados intentos. Espera e inténtalo de nuevo.';
+
+  @override
+  String get resetPasswordTitle => 'Cambiar Contraseña';
+
+  @override
+  String get resetPasswordDescription =>
+      'Introduce y confirma tu nueva contraseña.';
+
+  @override
+  String get resetPasswordNewPassword => 'Nueva Contraseña';
+
+  @override
+  String get resetPasswordSubmit => 'Cambiar';
+
+  @override
+  String get resetPasswordInvalidToken =>
+      'La sesión de recuperación ha caducado o el token no es válido. Solicita uno nuevo.';
+
+  @override
+  String get resetPasswordInvalidData =>
+      'Comprueba los datos de la nueva contraseña.';
+
+  @override
+  String get resetPasswordSuccess =>
+      '¡Contraseña restablecida correctamente! Inicia sesión.';
 }

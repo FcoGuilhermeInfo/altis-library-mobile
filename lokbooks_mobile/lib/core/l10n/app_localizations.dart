@@ -327,6 +327,84 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Não foi possível realizar o cadastro. Tente novamente.'**
   String get registerServerError;
+
+  /// No description provided for @forgotPasswordTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Recuperar Senha'**
+  String get forgotPasswordTitle;
+
+  /// No description provided for @forgotPasswordDescription.
+  ///
+  /// In pt, this message translates to:
+  /// **'Informe seu e-mail e CPF cadastrados para continuar.'**
+  String get forgotPasswordDescription;
+
+  /// No description provided for @forgotPasswordSubmit.
+  ///
+  /// In pt, this message translates to:
+  /// **'Continuar'**
+  String get forgotPasswordSubmit;
+
+  /// No description provided for @forgotPasswordInvalidCredentials.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível confirmar os dados informados.'**
+  String get forgotPasswordInvalidCredentials;
+
+  /// No description provided for @forgotPasswordInvalidData.
+  ///
+  /// In pt, this message translates to:
+  /// **'Verifique o e-mail e o CPF informados.'**
+  String get forgotPasswordInvalidData;
+
+  /// No description provided for @passwordResetTooManyRequests.
+  ///
+  /// In pt, this message translates to:
+  /// **'Muitas tentativas. Aguarde e tente novamente.'**
+  String get passwordResetTooManyRequests;
+
+  /// No description provided for @resetPasswordTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Alterar Senha'**
+  String get resetPasswordTitle;
+
+  /// No description provided for @resetPasswordDescription.
+  ///
+  /// In pt, this message translates to:
+  /// **'Digite sua nova senha e confirme para finalizar.'**
+  String get resetPasswordDescription;
+
+  /// No description provided for @resetPasswordNewPassword.
+  ///
+  /// In pt, this message translates to:
+  /// **'Nova Senha'**
+  String get resetPasswordNewPassword;
+
+  /// No description provided for @resetPasswordSubmit.
+  ///
+  /// In pt, this message translates to:
+  /// **'Alterar'**
+  String get resetPasswordSubmit;
+
+  /// No description provided for @resetPasswordInvalidToken.
+  ///
+  /// In pt, this message translates to:
+  /// **'O prazo de recuperação expirou ou o token é inválido. Solicite novamente.'**
+  String get resetPasswordInvalidToken;
+
+  /// No description provided for @resetPasswordInvalidData.
+  ///
+  /// In pt, this message translates to:
+  /// **'Verifique os dados da nova senha.'**
+  String get resetPasswordInvalidData;
+
+  /// No description provided for @resetPasswordSuccess.
+  ///
+  /// In pt, this message translates to:
+  /// **'Senha redefinida com sucesso! Faça seu login.'**
+  String get resetPasswordSuccess;
 }
 
 class _AppLocalizationsDelegate

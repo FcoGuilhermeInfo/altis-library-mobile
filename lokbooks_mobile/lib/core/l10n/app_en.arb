@@ -38,5 +38,18 @@
   "registerInvalidData": "Check the information provided and try again.",
   "registerForbidden": "Registration is not available without authorization.",
   "registerConflict": "An account with this information already exists.",
-  "registerServerError": "Could not complete registration. Please try again."
+  "registerServerError": "Could not complete registration. Please try again.",
+  "forgotPasswordTitle": "Recover Password",
+  "forgotPasswordDescription": "Enter your registered email address and CPF to continue.",
+  "forgotPasswordSubmit": "Continue",
+  "forgotPasswordInvalidCredentials": "We could not verify the information provided.",
+  "forgotPasswordInvalidData": "Check the email address and CPF provided.",
+  "passwordResetTooManyRequests": "Too many attempts. Wait and try again.",
+  "resetPasswordTitle": "Change Password",
+  "resetPasswordDescription": "Enter and confirm your new password.",
+  "resetPasswordNewPassword": "New Password",
+  "resetPasswordSubmit": "Change",
+  "resetPasswordInvalidToken": "Your recovery session has expired or the token is invalid. Please request a new one.",
+  "resetPasswordInvalidData": "Check your new password information.",
+  "resetPasswordSuccess": "Password reset successfully! Please sign in."
 }
