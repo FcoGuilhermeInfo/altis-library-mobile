@@ -173,4 +173,55 @@ class AppLocalizationsEn extends AppLocalizations {
   @override
   String get resetPasswordSuccess =>
       'Password reset successfully! Please sign in.';
+
+  @override
+  String get menuOpen => 'Open menu';
+
+  @override
+  String get menuDashboard => 'Dashboard';
+
+  @override
+  String get menuLoans => 'Loans';
+
+  @override
+  String get menuUsers => 'Users';
+
+  @override
+  String get menuPublishers => 'Publishers';
+
+  @override
+  String get menuBooks => 'Books';
+
+  @override
+  String get menuProfile => 'Profile';
+
+  @override
+  String get menuChangeLanguage => 'Change Language';
+
+  @override
+  String get menuLogout => 'Log Out';
+
+  @override
+  String get dashboardPlaceholder => 'Temporary Dashboard';
+
+  @override
+  String get moduleUnderDevelopment => 'Under development';
+
+  @override
+  String get roleAdmin => 'Administrator';
+
+  @override
+  String get roleUser => 'Library member';
+
+  @override
+  String get actionClose => 'Close';
+
+  @override
+  String get logoutError => 'Could not log out. Please try again.';
+
+  @override
+  String get languageDialogTitle => 'Languages';
+
+  @override
+  String get languageDialogSave => 'SAVE';
 }

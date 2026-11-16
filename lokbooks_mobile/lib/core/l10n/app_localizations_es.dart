@@ -175,4 +175,55 @@ class AppLocalizationsEs extends AppLocalizations {
   @override
   String get resetPasswordSuccess =>
       '¡Contraseña restablecida correctamente! Inicia sesión.';
+
+  @override
+  String get menuOpen => 'Abrir menú';
+
+  @override
+  String get menuDashboard => 'Panel principal';
+
+  @override
+  String get menuLoans => 'Préstamos';
+
+  @override
+  String get menuUsers => 'Usuarios';
+
+  @override
+  String get menuPublishers => 'Editoriales';
+
+  @override
+  String get menuBooks => 'Libros';
+
+  @override
+  String get menuProfile => 'Perfil';
+
+  @override
+  String get menuChangeLanguage => 'Cambiar idioma';
+
+  @override
+  String get menuLogout => 'Cerrar sesión';
+
+  @override
+  String get dashboardPlaceholder => 'Panel provisional';
+
+  @override
+  String get moduleUnderDevelopment => 'En desarrollo';
+
+  @override
+  String get roleAdmin => 'Administrador';
+
+  @override
+  String get roleUser => 'Usuario de la biblioteca';
+
+  @override
+  String get actionClose => 'Cerrar';
+
+  @override
+  String get logoutError => 'No se pudo cerrar la sesión. Inténtalo de nuevo.';
+
+  @override
+  String get languageDialogTitle => 'Idiomas';
+
+  @override
+  String get languageDialogSave => 'GUARDAR';
 }

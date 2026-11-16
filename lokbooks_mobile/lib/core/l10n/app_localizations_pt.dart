@@ -174,4 +174,55 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get resetPasswordSuccess =>
       'Senha redefinida com sucesso! Faça seu login.';
+
+  @override
+  String get menuOpen => 'Abrir menu';
+
+  @override
+  String get menuDashboard => 'Dashboard';
+
+  @override
+  String get menuLoans => 'Empréstimos';
+
+  @override
+  String get menuUsers => 'Usuários';
+
+  @override
+  String get menuPublishers => 'Editoras';
+
+  @override
+  String get menuBooks => 'Livros';
+
+  @override
+  String get menuProfile => 'Perfil';
+
+  @override
+  String get menuChangeLanguage => 'Trocar Idioma';
+
+  @override
+  String get menuLogout => 'Encerrar Sessão';
+
+  @override
+  String get dashboardPlaceholder => 'Dashboard Provisorio';
+
+  @override
+  String get moduleUnderDevelopment => 'Em desenvolvimento';
+
+  @override
+  String get roleAdmin => 'Administrador';
+
+  @override
+  String get roleUser => 'Locatário';
+
+  @override
+  String get actionClose => 'Fechar';
+
+  @override
+  String get logoutError => 'Não foi possível sair. Tente novamente.';
+
+  @override
+  String get languageDialogTitle => 'Idiomas';
+
+  @override
+  String get languageDialogSave => 'SALVAR';
 }
