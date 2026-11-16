@@ -371,4 +371,96 @@ class AppLocalizationsEs extends AppLocalizations {
   String publishersShowing(int start, int end, int total) {
     return 'Mostrando de $start a $end de $total editoriales';
   }
+
+  @override
+  String get booksSearch => 'Buscar libros por título';
+
+  @override
+  String get booksNew => 'Registrar nuevo libro';
+
+  @override
+  String get booksCreateTitle => 'Registrar Libro';
+
+  @override
+  String get booksEditTitle => 'Editar Libro';
+
+  @override
+  String get booksTitle => 'Título';
+
+  @override
+  String get booksAuthor => 'Autor';
+
+  @override
+  String get booksYear => 'Año';
+
+  @override
+  String get booksPublisher => 'Editorial';
+
+  @override
+  String get booksTotalQuantity => 'Cantidad total';
+
+  @override
+  String get booksTotalShort => 'Total';
+
+  @override
+  String get booksAvailableShort => 'Disponible';
+
+  @override
+  String get booksBorrowedShort => 'Prestada';
+
+  @override
+  String get booksCreate => 'Registrar';
+
+  @override
+  String get booksEdit => 'Editar';
+
+  @override
+  String get booksDelete => 'Eliminar Libro';
+
+  @override
+  String get booksDeleteConfirmation =>
+      '¿Seguro que quieres eliminar este libro?';
+
+  @override
+  String get booksDeleteConflict =>
+      'No se puede eliminar un libro que tenga préstamos relacionados.';
+
+  @override
+  String get booksInvalidData => 'Comprueba los datos del libro.';
+
+  @override
+  String get booksInvalidYear => 'Introduce un año entre 1 y 32767.';
+
+  @override
+  String get booksInvalidQuantity =>
+      'La cantidad total debe ser mayor que cero.';
+
+  @override
+  String get booksQuantityBelowBorrowed =>
+      'La cantidad total no puede ser inferior a la cantidad prestada.';
+
+  @override
+  String get booksPublisherLoadError =>
+      'No se pudieron cargar las editoriales.';
+
+  @override
+  String get booksConflict =>
+      'Este libro puede estar registrado o existe un conflicto con los datos proporcionados.';
+
+  @override
+  String get booksNotFound => 'Libro no encontrado.';
+
+  @override
+  String get booksError => 'No se pudo completar la operación con el libro.';
+
+  @override
+  String get booksEmpty => 'No se encontraron libros.';
+
+  @override
+  String get booksSuccess => 'Operación completada correctamente.';
+
+  @override
+  String booksShowing(int start, int end, int total) {
+    return 'Mostrando de $start a $end de $total libros';
+  }
 }

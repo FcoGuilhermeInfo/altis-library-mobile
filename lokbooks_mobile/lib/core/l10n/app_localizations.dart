@@ -777,6 +777,174 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Mostrando {start} a {end} de {total} editoras'**
   String publishersShowing(int start, int end, int total);
+
+  /// No description provided for @booksSearch.
+  ///
+  /// In pt, this message translates to:
+  /// **'Buscar Livro por Nome'**
+  String get booksSearch;
+
+  /// No description provided for @booksNew.
+  ///
+  /// In pt, this message translates to:
+  /// **'Cadastrar novo livro'**
+  String get booksNew;
+
+  /// No description provided for @booksCreateTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Cadastrar Livro'**
+  String get booksCreateTitle;
+
+  /// No description provided for @booksEditTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Editar Livro'**
+  String get booksEditTitle;
+
+  /// No description provided for @booksTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Título'**
+  String get booksTitle;
+
+  /// No description provided for @booksAuthor.
+  ///
+  /// In pt, this message translates to:
+  /// **'Autor'**
+  String get booksAuthor;
+
+  /// No description provided for @booksYear.
+  ///
+  /// In pt, this message translates to:
+  /// **'Ano'**
+  String get booksYear;
+
+  /// No description provided for @booksPublisher.
+  ///
+  /// In pt, this message translates to:
+  /// **'Editora'**
+  String get booksPublisher;
+
+  /// No description provided for @booksTotalQuantity.
+  ///
+  /// In pt, this message translates to:
+  /// **'Quantidade total'**
+  String get booksTotalQuantity;
+
+  /// No description provided for @booksTotalShort.
+  ///
+  /// In pt, this message translates to:
+  /// **'Total'**
+  String get booksTotalShort;
+
+  /// No description provided for @booksAvailableShort.
+  ///
+  /// In pt, this message translates to:
+  /// **'Disponível'**
+  String get booksAvailableShort;
+
+  /// No description provided for @booksBorrowedShort.
+  ///
+  /// In pt, this message translates to:
+  /// **'Emprestada'**
+  String get booksBorrowedShort;
+
+  /// No description provided for @booksCreate.
+  ///
+  /// In pt, this message translates to:
+  /// **'Cadastrar'**
+  String get booksCreate;
+
+  /// No description provided for @booksEdit.
+  ///
+  /// In pt, this message translates to:
+  /// **'Editar'**
+  String get booksEdit;
+
+  /// No description provided for @booksDelete.
+  ///
+  /// In pt, this message translates to:
+  /// **'Excluir Livro'**
+  String get booksDelete;
+
+  /// No description provided for @booksDeleteConfirmation.
+  ///
+  /// In pt, this message translates to:
+  /// **'Tem certeza de que deseja excluir este livro?'**
+  String get booksDeleteConfirmation;
+
+  /// No description provided for @booksDeleteConflict.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não é possível excluir um livro que possui empréstimos relacionados.'**
+  String get booksDeleteConflict;
+
+  /// No description provided for @booksInvalidData.
+  ///
+  /// In pt, this message translates to:
+  /// **'Verifique os dados informados do livro.'**
+  String get booksInvalidData;
+
+  /// No description provided for @booksInvalidYear.
+  ///
+  /// In pt, this message translates to:
+  /// **'Informe um ano entre 1 e 32767.'**
+  String get booksInvalidYear;
+
+  /// No description provided for @booksInvalidQuantity.
+  ///
+  /// In pt, this message translates to:
+  /// **'A quantidade total deve ser maior que zero.'**
+  String get booksInvalidQuantity;
+
+  /// No description provided for @booksQuantityBelowBorrowed.
+  ///
+  /// In pt, this message translates to:
+  /// **'A quantidade total não pode ser menor que a quantidade emprestada.'**
+  String get booksQuantityBelowBorrowed;
+
+  /// No description provided for @booksPublisherLoadError.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível carregar as editoras.'**
+  String get booksPublisherLoadError;
+
+  /// No description provided for @booksConflict.
+  ///
+  /// In pt, this message translates to:
+  /// **'Este livro já pode estar cadastrado ou existe um conflito com os dados informados.'**
+  String get booksConflict;
+
+  /// No description provided for @booksNotFound.
+  ///
+  /// In pt, this message translates to:
+  /// **'Livro não encontrado.'**
+  String get booksNotFound;
+
+  /// No description provided for @booksError.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível concluir a operação com o livro.'**
+  String get booksError;
+
+  /// No description provided for @booksEmpty.
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhum livro encontrado.'**
+  String get booksEmpty;
+
+  /// No description provided for @booksSuccess.
+  ///
+  /// In pt, this message translates to:
+  /// **'Operação realizada com sucesso.'**
+  String get booksSuccess;
+
+  /// No description provided for @booksShowing.
+  ///
+  /// In pt, this message translates to:
+  /// **'Mostrando {start} a {end} de {total} livros'**
+  String booksShowing(int start, int end, int total);
 }
 
 class _AppLocalizationsDelegate

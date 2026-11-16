@@ -5,9 +5,10 @@ import '../l10n/app_localizations.dart';
 import '../theme/app_colors.dart';
 import '../../modules/auth/controllers/auth_controller.dart';
 import '../../modules/auth/models/user_role.dart';
+import '../../modules/books/presentation/pages/books_page.dart';
 import '../../modules/home/presentation/pages/dashboard_page.dart';
-import '../../modules/users/presentation/pages/users_page.dart';
 import '../../modules/publishers/presentation/pages/publishers_page.dart';
+import '../../modules/users/presentation/pages/users_page.dart';
 import 'app_header.dart';
 import 'language_dialog.dart';
 import 'profile_menu.dart';
@@ -91,7 +92,8 @@ class _MainShellState extends State<MainShell> {
         content: Text(roleLabel),
         actions: [
           TextButton(
-            onPressed: () => Navigator.of(dialogContext).pop(),
+            onPressed: () =>
+                Navigator.of(dialogContext).pop(),
             child: Text(l10n.actionClose),
           ),
         ],
@@ -161,12 +163,9 @@ class _MainShellState extends State<MainShell> {
       AdminSection.dashboard => const DashboardPage(),
       AdminSection.users => const UsersPage(),
       AdminSection.publishers => const PublishersPage(),
+      AdminSection.books => const BooksPage(),
       AdminSection.loans => _PendingModulePage(
           title: l10n.menuLoans,
-          message: l10n.moduleUnderDevelopment,
-        ),
-      AdminSection.books => _PendingModulePage(
-          title: l10n.menuBooks,
           message: l10n.moduleUnderDevelopment,
         ),
     };
@@ -186,7 +185,8 @@ class _MainShellState extends State<MainShell> {
         leading: Builder(
           builder: (context) => IconButton(
             tooltip: l10n.menuOpen,
-            onPressed: () => Scaffold.of(context).openDrawer(),
+            onPressed: () =>
+                Scaffold.of(context).openDrawer(),
             icon: const Icon(
               Icons.menu,
               color: Colors.white,
