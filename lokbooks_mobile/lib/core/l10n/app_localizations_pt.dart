@@ -1,0 +1,177 @@
+// ignore: unused_import
+import 'package:intl/intl.dart' as intl;
+
+import 'app_localizations.dart';
+
+// ignore_for_file: type=lint
+
+/// The translations for Portuguese (`pt`).
+class AppLocalizationsPt extends AppLocalizations {
+  AppLocalizationsPt([String locale = 'pt']) : super(locale);
+
+  @override
+  String get loginTitle => 'Login';
+
+  @override
+  String get loginEmail => 'E-mail';
+
+  @override
+  String get loginPassword => 'Senha';
+
+  @override
+  String get loginSubmit => 'Entrar';
+
+  @override
+  String get loginForgotPassword => 'Esqueceu sua senha?';
+
+  @override
+  String get loginNoAccount => 'Não tem uma conta?';
+
+  @override
+  String get loginRegister => 'Cadastre-se';
+
+  @override
+  String get loginEmailRequired => 'Informe seu e-mail';
+
+  @override
+  String get loginEmailInvalid => 'Informe um e-mail válido';
+
+  @override
+  String get loginPasswordRequired => 'Informe sua senha';
+
+  @override
+  String get loginInvalidCredentials => 'E-mail ou senha inválidos.';
+
+  @override
+  String get loginConnectionError => 'Não foi possível conectar ao servidor.';
+
+  @override
+  String get loginServerError =>
+      'Não foi possível realizar o login. Tente novamente.';
+
+  @override
+  String get loginAdminSuccess => 'Autenticado como administrador.';
+
+  @override
+  String get loginUserSuccess => 'Autenticado como locatário.';
+
+  @override
+  String get registerTitle => 'Cadastro';
+
+  @override
+  String get registerName => 'Nome Completo';
+
+  @override
+  String get registerBirthDate => 'Data de Nascimento';
+
+  @override
+  String get registerCpf => 'CPF';
+
+  @override
+  String get registerPhone => 'Telefone';
+
+  @override
+  String get registerAddress => 'Endereço';
+
+  @override
+  String get registerEmail => 'E-mail';
+
+  @override
+  String get registerPassword => 'Senha';
+
+  @override
+  String get registerConfirmPassword => 'Confirmar Senha';
+
+  @override
+  String get registerSubmit => 'Entrar';
+
+  @override
+  String get registerBackToLogin => 'Já tem uma conta?';
+
+  @override
+  String get registerRequired => 'Este campo é obrigatório';
+
+  @override
+  String get registerInvalidCpf => 'O CPF deve conter 11 dígitos';
+
+  @override
+  String get registerInvalidPhone => 'Informe um celular com DDD e 11 dígitos';
+
+  @override
+  String get registerInvalidDate => 'Informe uma data de nascimento válida';
+
+  @override
+  String get registerInvalidEmail => 'Informe um e-mail válido do Gmail';
+
+  @override
+  String get registerInvalidPassword =>
+      'A senha deve ter entre 8 e 15 caracteres';
+
+  @override
+  String get registerPasswordMismatch => 'As senhas não coincidem';
+
+  @override
+  String get registerSuccess =>
+      'Cadastro realizado com sucesso! Faça seu login.';
+
+  @override
+  String get registerInvalidData =>
+      'Verifique os dados informados e tente novamente.';
+
+  @override
+  String get registerForbidden =>
+      'O cadastro não está disponível sem autorização.';
+
+  @override
+  String get registerConflict => 'Já existe um cadastro com esses dados.';
+
+  @override
+  String get registerServerError =>
+      'Não foi possível realizar o cadastro. Tente novamente.';
+
+  @override
+  String get forgotPasswordTitle => 'Recuperar Senha';
+
+  @override
+  String get forgotPasswordDescription =>
+      'Informe seu e-mail e CPF cadastrados para continuar.';
+
+  @override
+  String get forgotPasswordSubmit => 'Continuar';
+
+  @override
+  String get forgotPasswordInvalidCredentials =>
+      'Não foi possível confirmar os dados informados.';
+
+  @override
+  String get forgotPasswordInvalidData =>
+      'Verifique o e-mail e o CPF informados.';
+
+  @override
+  String get passwordResetTooManyRequests =>
+      'Muitas tentativas. Aguarde e tente novamente.';
+
+  @override
+  String get resetPasswordTitle => 'Alterar Senha';
+
+  @override
+  String get resetPasswordDescription =>
+      'Digite sua nova senha e confirme para finalizar.';
+
+  @override
+  String get resetPasswordNewPassword => 'Nova Senha';
+
+  @override
+  String get resetPasswordSubmit => 'Alterar';
+
+  @override
+  String get resetPasswordInvalidToken =>
+      'O prazo de recuperação expirou ou o token é inválido. Solicite novamente.';
+
+  @override
+  String get resetPasswordInvalidData => 'Verifique os dados da nova senha.';
+
+  @override
+  String get resetPasswordSuccess =>
+      'Senha redefinida com sucesso! Faça seu login.';
+}
