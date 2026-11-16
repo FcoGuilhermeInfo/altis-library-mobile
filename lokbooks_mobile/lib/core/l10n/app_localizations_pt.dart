@@ -462,4 +462,98 @@ class AppLocalizationsPt extends AppLocalizations {
   String booksShowing(int start, int end, int total) {
     return 'Mostrando $start a $end de $total livros';
   }
+
+  @override
+  String get loansSearch => 'Buscar empréstimo por locatário';
+
+  @override
+  String get loansNew => 'Registrar novo empréstimo';
+
+  @override
+  String get loansCreateTitle => 'Realizar Empréstimo';
+
+  @override
+  String get loansCreate => 'Realizar Empréstimo';
+
+  @override
+  String get loansDetailsTitle => 'Detalhes do Empréstimo';
+
+  @override
+  String get loansViewDetails => 'Visualizar detalhes';
+
+  @override
+  String get loansMember => 'Locatário';
+
+  @override
+  String get loansBook => 'Livro';
+
+  @override
+  String get loansBorrowedAt => 'Data do Empréstimo';
+
+  @override
+  String get loansDueDate => 'Devolução Prevista';
+
+  @override
+  String get loansReturnedAt => 'Data da Devolução';
+
+  @override
+  String get loansSelectDate => 'Selecione uma data';
+
+  @override
+  String get loansBorrowed => 'Emprestado';
+
+  @override
+  String get loansOverdue => 'Atrasado';
+
+  @override
+  String get loansReturned => 'Finalizado';
+
+  @override
+  String get loansUnknown => 'Desconhecido';
+
+  @override
+  String get loansReturn => 'Confirmar Devolução';
+
+  @override
+  String get loansReturnConfirmation =>
+      'Deseja confirmar a devolução deste livro?';
+
+  @override
+  String get loansRecentTitle => 'Últimos Empréstimos Realizados';
+
+  @override
+  String get loansFullHistory => 'Ver histórico completo';
+
+  @override
+  String get loansHistoryTitle => 'Histórico de Empréstimos';
+
+  @override
+  String get loansEmptyHistory => 'Nenhum empréstimo finalizado.';
+
+  @override
+  String get loansEmpty => 'Nenhum empréstimo ativo encontrado.';
+
+  @override
+  String get loansOptionsLoadError =>
+      'Não foi possível carregar locatários e livros.';
+
+  @override
+  String get loansInvalidDueDate => 'A devolução prevista deve ser futura.';
+
+  @override
+  String get loansNotFound => 'Empréstimo não encontrado.';
+
+  @override
+  String get loansOperationError => 'Não foi possível concluir a operação.';
+
+  @override
+  String get loansCreatedSuccess => 'Empréstimo registrado com sucesso.';
+
+  @override
+  String get loansReturnedSuccess => 'Devolução confirmada com sucesso.';
+
+  @override
+  String loansShowing(int start, int end, int total) {
+    return 'Mostrando $start a $end de $total empréstimos';
+  }
 }

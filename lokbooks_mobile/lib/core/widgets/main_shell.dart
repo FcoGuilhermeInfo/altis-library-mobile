@@ -7,6 +7,7 @@ import '../../modules/auth/controllers/auth_controller.dart';
 import '../../modules/auth/models/user_role.dart';
 import '../../modules/books/presentation/pages/books_page.dart';
 import '../../modules/home/presentation/pages/dashboard_page.dart';
+import '../../modules/loans/presentation/pages/loans_page.dart';
 import '../../modules/publishers/presentation/pages/publishers_page.dart';
 import '../../modules/users/presentation/pages/users_page.dart';
 import 'app_header.dart';
@@ -161,13 +162,10 @@ class _MainShellState extends State<MainShell> {
 
     return switch (_selectedSection) {
       AdminSection.dashboard => const DashboardPage(),
+      AdminSection.loans => const LoansPage(),
       AdminSection.users => const UsersPage(),
       AdminSection.publishers => const PublishersPage(),
       AdminSection.books => const BooksPage(),
-      AdminSection.loans => _PendingModulePage(
-          title: l10n.menuLoans,
-          message: l10n.moduleUnderDevelopment,
-        ),
     };
   }
 
@@ -261,36 +259,6 @@ class _MainShellState extends State<MainShell> {
         ),
       ),
       body: _buildContent(l10n, isAdmin),
-    );
-  }
-}
-
-class _PendingModulePage extends StatelessWidget {
-  final String title;
-  final String message;
-
-  const _PendingModulePage({
-    required this.title,
-    required this.message,
-  });
-
-  @override
-  Widget build(BuildContext context) {
-    return Center(
-      child: Column(
-        mainAxisSize: MainAxisSize.min,
-        children: [
-          Text(
-            title,
-            style: const TextStyle(
-              fontSize: 28,
-              fontWeight: FontWeight.w500,
-            ),
-          ),
-          const SizedBox(height: 12),
-          Text(message),
-        ],
-      ),
     );
   }
 }
