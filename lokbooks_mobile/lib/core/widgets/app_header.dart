@@ -5,7 +5,14 @@ import '../theme/app_colors.dart';
 
 class AppHeader extends StatelessWidget
     implements PreferredSizeWidget {
-  const AppHeader({super.key});
+  final Widget? leading;
+  final List<Widget>? actions;
+
+  const AppHeader({
+    super.key,
+    this.leading,
+    this.actions,
+  });
 
   @override
   Size get preferredSize => const Size.fromHeight(60);
@@ -16,6 +23,8 @@ class AppHeader extends StatelessWidget
       automaticallyImplyLeading: false,
       backgroundColor: AppColors.primary,
       centerTitle: true,
+      leading: leading,
+      actions: actions,
       title: Image.asset(
         'assets/images/lokbooks.png',
         height: 38,

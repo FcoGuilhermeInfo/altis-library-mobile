@@ -405,6 +405,108 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Senha redefinida com sucesso! Faça seu login.'**
   String get resetPasswordSuccess;
+
+  /// No description provided for @menuOpen.
+  ///
+  /// In pt, this message translates to:
+  /// **'Abrir menu'**
+  String get menuOpen;
+
+  /// No description provided for @menuDashboard.
+  ///
+  /// In pt, this message translates to:
+  /// **'Dashboard'**
+  String get menuDashboard;
+
+  /// No description provided for @menuLoans.
+  ///
+  /// In pt, this message translates to:
+  /// **'Empréstimos'**
+  String get menuLoans;
+
+  /// No description provided for @menuUsers.
+  ///
+  /// In pt, this message translates to:
+  /// **'Usuários'**
+  String get menuUsers;
+
+  /// No description provided for @menuPublishers.
+  ///
+  /// In pt, this message translates to:
+  /// **'Editoras'**
+  String get menuPublishers;
+
+  /// No description provided for @menuBooks.
+  ///
+  /// In pt, this message translates to:
+  /// **'Livros'**
+  String get menuBooks;
+
+  /// No description provided for @menuProfile.
+  ///
+  /// In pt, this message translates to:
+  /// **'Perfil'**
+  String get menuProfile;
+
+  /// No description provided for @menuChangeLanguage.
+  ///
+  /// In pt, this message translates to:
+  /// **'Trocar Idioma'**
+  String get menuChangeLanguage;
+
+  /// No description provided for @menuLogout.
+  ///
+  /// In pt, this message translates to:
+  /// **'Encerrar Sessão'**
+  String get menuLogout;
+
+  /// No description provided for @dashboardPlaceholder.
+  ///
+  /// In pt, this message translates to:
+  /// **'Dashboard Provisorio'**
+  String get dashboardPlaceholder;
+
+  /// No description provided for @moduleUnderDevelopment.
+  ///
+  /// In pt, this message translates to:
+  /// **'Em desenvolvimento'**
+  String get moduleUnderDevelopment;
+
+  /// No description provided for @roleAdmin.
+  ///
+  /// In pt, this message translates to:
+  /// **'Administrador'**
+  String get roleAdmin;
+
+  /// No description provided for @roleUser.
+  ///
+  /// In pt, this message translates to:
+  /// **'Locatário'**
+  String get roleUser;
+
+  /// No description provided for @actionClose.
+  ///
+  /// In pt, this message translates to:
+  /// **'Fechar'**
+  String get actionClose;
+
+  /// No description provided for @logoutError.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível sair. Tente novamente.'**
+  String get logoutError;
+
+  /// No description provided for @languageDialogTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Idiomas'**
+  String get languageDialogTitle;
+
+  /// No description provided for @languageDialogSave.
+  ///
+  /// In pt, this message translates to:
+  /// **'SALVAR'**
+  String get languageDialogSave;
 }
 
 class _AppLocalizationsDelegate
