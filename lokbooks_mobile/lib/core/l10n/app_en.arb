@@ -101,5 +101,31 @@
   "usersDetailsTitle": "View details",
   "usersViewDetails": "View details",
   "usersCreatedAt": "Created on",
-  "usersUpdatedAt": "Last updated"
+  "usersUpdatedAt": "Last updated",
+  "publishersSearch": "Search publishers by name",
+  "publishersNew": "Register new publisher",
+  "publishersCreateTitle": "Register Publisher",
+  "publishersEditTitle": "Edit Publisher",
+  "publishersSite": "Website",
+  "publishersCreate": "Register",
+  "publishersEdit": "Edit",
+  "publishersDelete": "Delete Publisher",
+  "publishersDeleteConfirmation": "Are you sure you want to delete this publisher?",
+  "publishersDeleteConflict": "A publisher with related books cannot be deleted.",
+  "publishersInvalidData": "Check the publisher information.",
+  "publishersInvalidPhone": "Enter a valid phone number with area code.",
+  "publishersInvalidSite": "Enter a valid website address.",
+  "publishersConflict": "The operation could not be completed due to a conflict.",
+  "publishersNotFound": "Publisher not found.",
+  "publishersError": "Could not complete the publisher operation.",
+  "publishersEmpty": "No publishers found.",
+  "publishersSuccess": "Operation completed successfully.",
+  "publishersShowing": "Showing {start} to {end} of {total} publishers",
+  "@publishersShowing": {
+    "placeholders": {
+      "start": {"type": "int"},
+      "end": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  }
 }
