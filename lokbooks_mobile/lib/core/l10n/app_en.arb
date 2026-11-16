@@ -97,5 +97,9 @@
   "usersConfirmInactivate": "Do you want to deactivate this member?",
   "usersCancel": "Cancel",
   "usersConfirm": "Confirm",
-  "usersStatusUpdated": "Status updated successfully."
+  "usersStatusUpdated": "Status updated successfully.",
+  "usersDetailsTitle": "View details",
+  "usersViewDetails": "View details",
+  "usersCreatedAt": "Created on",
+  "usersUpdatedAt": "Last updated"
 }

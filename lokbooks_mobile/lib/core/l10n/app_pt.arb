@@ -97,5 +97,9 @@
   "usersConfirmInactivate": "Deseja inativar este locatário?",
   "usersCancel": "Cancelar",
   "usersConfirm": "Confirmar",
-  "usersStatusUpdated": "Status atualizado com sucesso."
+  "usersStatusUpdated": "Status atualizado com sucesso.",
+  "usersDetailsTitle": "Visualizar detalhes",
+  "usersViewDetails": "Visualizar detalhes",
+  "usersCreatedAt": "Data de criação",
+  "usersUpdatedAt": "Última atualização"
 }

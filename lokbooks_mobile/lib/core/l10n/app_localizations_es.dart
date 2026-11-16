@@ -226,4 +226,85 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get languageDialogSave => 'GUARDAR';
+
+  @override
+  String get usersSearchHint => 'Buscar usuarios por nombre';
+
+  @override
+  String get usersName => 'Nombre';
+
+  @override
+  String get usersCpf => 'CPF';
+
+  @override
+  String get usersStatus => 'Estado';
+
+  @override
+  String get usersActive => 'Activo';
+
+  @override
+  String get usersInactive => 'Inactivo';
+
+  @override
+  String get usersActions => 'Acciones del usuario';
+
+  @override
+  String get usersPrevious => 'Anterior';
+
+  @override
+  String get usersNext => 'Siguiente';
+
+  @override
+  String usersShowing(int start, int end, int total) {
+    return 'Mostrando de $start a $end de $total usuarios';
+  }
+
+  @override
+  String get usersEmpty => 'No se encontraron usuarios.';
+
+  @override
+  String get usersRetry => 'Intentar de nuevo';
+
+  @override
+  String get usersLoadError => 'No se pudieron cargar los usuarios.';
+
+  @override
+  String get usersUnauthorized =>
+      'Tu sesión ha caducado. Inicia sesión de nuevo.';
+
+  @override
+  String get usersForbidden => 'No tienes permiso para acceder a esta función.';
+
+  @override
+  String get usersActivate => 'Activar usuario';
+
+  @override
+  String get usersInactivate => 'Desactivar usuario';
+
+  @override
+  String get usersConfirmActivate => '¿Quieres activar este usuario?';
+
+  @override
+  String get usersConfirmInactivate => '¿Quieres desactivar este usuario?';
+
+  @override
+  String get usersCancel => 'Cancelar';
+
+  @override
+  String get usersConfirm => 'Confirmar';
+
+  @override
+  String get usersStatusUpdated => 'Estado actualizado correctamente.';
+
+  @override
+  String get usersDetailsTitle => 'Ver detalles';
+
+  @override
+  String get usersViewDetails => 'Ver detalles';
+
+  @override
+  String get usersCreatedAt => 'Fecha de creación';
+
+  @override
+  String get usersUpdatedAt => 'Última actualización';
 }

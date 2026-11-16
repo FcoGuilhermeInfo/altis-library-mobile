@@ -507,6 +507,162 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'SALVAR'**
   String get languageDialogSave;
+
+  /// No description provided for @usersSearchHint.
+  ///
+  /// In pt, this message translates to:
+  /// **'Buscar usuário por nome'**
+  String get usersSearchHint;
+
+  /// No description provided for @usersName.
+  ///
+  /// In pt, this message translates to:
+  /// **'Nome'**
+  String get usersName;
+
+  /// No description provided for @usersCpf.
+  ///
+  /// In pt, this message translates to:
+  /// **'CPF'**
+  String get usersCpf;
+
+  /// No description provided for @usersStatus.
+  ///
+  /// In pt, this message translates to:
+  /// **'Status'**
+  String get usersStatus;
+
+  /// No description provided for @usersActive.
+  ///
+  /// In pt, this message translates to:
+  /// **'Ativo'**
+  String get usersActive;
+
+  /// No description provided for @usersInactive.
+  ///
+  /// In pt, this message translates to:
+  /// **'Inativo'**
+  String get usersInactive;
+
+  /// No description provided for @usersActions.
+  ///
+  /// In pt, this message translates to:
+  /// **'Ações do usuário'**
+  String get usersActions;
+
+  /// No description provided for @usersPrevious.
+  ///
+  /// In pt, this message translates to:
+  /// **'Voltar'**
+  String get usersPrevious;
+
+  /// No description provided for @usersNext.
+  ///
+  /// In pt, this message translates to:
+  /// **'Próximo'**
+  String get usersNext;
+
+  /// No description provided for @usersShowing.
+  ///
+  /// In pt, this message translates to:
+  /// **'Mostrando {start} a {end} de {total} usuários'**
+  String usersShowing(int start, int end, int total);
+
+  /// No description provided for @usersEmpty.
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhum usuário encontrado.'**
+  String get usersEmpty;
+
+  /// No description provided for @usersRetry.
+  ///
+  /// In pt, this message translates to:
+  /// **'Tentar novamente'**
+  String get usersRetry;
+
+  /// No description provided for @usersLoadError.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível carregar os usuários.'**
+  String get usersLoadError;
+
+  /// No description provided for @usersUnauthorized.
+  ///
+  /// In pt, this message translates to:
+  /// **'Sua sessão expirou. Entre novamente.'**
+  String get usersUnauthorized;
+
+  /// No description provided for @usersForbidden.
+  ///
+  /// In pt, this message translates to:
+  /// **'Você não tem permissão para acessar esta funcionalidade.'**
+  String get usersForbidden;
+
+  /// No description provided for @usersActivate.
+  ///
+  /// In pt, this message translates to:
+  /// **'Ativar locatário'**
+  String get usersActivate;
+
+  /// No description provided for @usersInactivate.
+  ///
+  /// In pt, this message translates to:
+  /// **'Inativar locatário'**
+  String get usersInactivate;
+
+  /// No description provided for @usersConfirmActivate.
+  ///
+  /// In pt, this message translates to:
+  /// **'Deseja ativar este locatário?'**
+  String get usersConfirmActivate;
+
+  /// No description provided for @usersConfirmInactivate.
+  ///
+  /// In pt, this message translates to:
+  /// **'Deseja inativar este locatário?'**
+  String get usersConfirmInactivate;
+
+  /// No description provided for @usersCancel.
+  ///
+  /// In pt, this message translates to:
+  /// **'Cancelar'**
+  String get usersCancel;
+
+  /// No description provided for @usersConfirm.
+  ///
+  /// In pt, this message translates to:
+  /// **'Confirmar'**
+  String get usersConfirm;
+
+  /// No description provided for @usersStatusUpdated.
+  ///
+  /// In pt, this message translates to:
+  /// **'Status atualizado com sucesso.'**
+  String get usersStatusUpdated;
+
+  /// No description provided for @usersDetailsTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Visualizar detalhes'**
+  String get usersDetailsTitle;
+
+  /// No description provided for @usersViewDetails.
+  ///
+  /// In pt, this message translates to:
+  /// **'Visualizar detalhes'**
+  String get usersViewDetails;
+
+  /// No description provided for @usersCreatedAt.
+  ///
+  /// In pt, this message translates to:
+  /// **'Data de criação'**
+  String get usersCreatedAt;
+
+  /// No description provided for @usersUpdatedAt.
+  ///
+  /// In pt, this message translates to:
+  /// **'Última atualização'**
+  String get usersUpdatedAt;
 }
 
 class _AppLocalizationsDelegate
