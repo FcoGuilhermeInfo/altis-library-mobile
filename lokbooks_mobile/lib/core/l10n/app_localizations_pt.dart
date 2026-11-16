@@ -306,4 +306,68 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get usersUpdatedAt => 'Última atualização';
+
+  @override
+  String get publishersSearch => 'Buscar Editora por Nome';
+
+  @override
+  String get publishersNew => 'Cadastrar nova editora';
+
+  @override
+  String get publishersCreateTitle => 'Cadastrar Editora';
+
+  @override
+  String get publishersEditTitle => 'Editar Editora';
+
+  @override
+  String get publishersSite => 'Site';
+
+  @override
+  String get publishersCreate => 'Cadastrar';
+
+  @override
+  String get publishersEdit => 'Editar';
+
+  @override
+  String get publishersDelete => 'Excluir Editora';
+
+  @override
+  String get publishersDeleteConfirmation =>
+      'Tem certeza de que deseja excluir esta editora?';
+
+  @override
+  String get publishersDeleteConflict =>
+      'Não é possível excluir uma editora que possui livros relacionados.';
+
+  @override
+  String get publishersInvalidData =>
+      'Verifique os dados informados da editora.';
+
+  @override
+  String get publishersInvalidPhone => 'Informe um telefone com DDD válido.';
+
+  @override
+  String get publishersInvalidSite => 'Informe um endereço de site válido.';
+
+  @override
+  String get publishersConflict =>
+      'Não foi possível concluir a operação devido a um conflito.';
+
+  @override
+  String get publishersNotFound => 'Editora não encontrada.';
+
+  @override
+  String get publishersError =>
+      'Não foi possível concluir a operação com a editora.';
+
+  @override
+  String get publishersEmpty => 'Nenhuma editora encontrada.';
+
+  @override
+  String get publishersSuccess => 'Operação realizada com sucesso.';
+
+  @override
+  String publishersShowing(int start, int end, int total) {
+    return 'Mostrando $start a $end de $total editoras';
+  }
 }

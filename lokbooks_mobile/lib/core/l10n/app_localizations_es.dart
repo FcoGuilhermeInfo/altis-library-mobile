@@ -307,4 +307,68 @@ class AppLocalizationsEs extends AppLocalizations {
 
   @override
   String get usersUpdatedAt => 'Última actualización';
+
+  @override
+  String get publishersSearch => 'Buscar editoriales por nombre';
+
+  @override
+  String get publishersNew => 'Registrar nueva editorial';
+
+  @override
+  String get publishersCreateTitle => 'Registrar Editorial';
+
+  @override
+  String get publishersEditTitle => 'Editar Editorial';
+
+  @override
+  String get publishersSite => 'Sitio web';
+
+  @override
+  String get publishersCreate => 'Registrar';
+
+  @override
+  String get publishersEdit => 'Editar';
+
+  @override
+  String get publishersDelete => 'Eliminar Editorial';
+
+  @override
+  String get publishersDeleteConfirmation =>
+      '¿Seguro que quieres eliminar esta editorial?';
+
+  @override
+  String get publishersDeleteConflict =>
+      'No se puede eliminar una editorial con libros relacionados.';
+
+  @override
+  String get publishersInvalidData => 'Comprueba los datos de la editorial.';
+
+  @override
+  String get publishersInvalidPhone =>
+      'Introduce un teléfono válido con código de área.';
+
+  @override
+  String get publishersInvalidSite => 'Introduce una dirección web válida.';
+
+  @override
+  String get publishersConflict =>
+      'No se pudo completar la operación debido a un conflicto.';
+
+  @override
+  String get publishersNotFound => 'Editorial no encontrada.';
+
+  @override
+  String get publishersError =>
+      'No se pudo completar la operación con la editorial.';
+
+  @override
+  String get publishersEmpty => 'No se encontraron editoriales.';
+
+  @override
+  String get publishersSuccess => 'Operación completada correctamente.';
+
+  @override
+  String publishersShowing(int start, int end, int total) {
+    return 'Mostrando de $start a $end de $total editoriales';
+  }
 }

@@ -101,5 +101,31 @@
   "usersDetailsTitle": "Ver detalles",
   "usersViewDetails": "Ver detalles",
   "usersCreatedAt": "Fecha de creación",
-  "usersUpdatedAt": "Última actualización"
+  "usersUpdatedAt": "Última actualización",
+  "publishersSearch": "Buscar editoriales por nombre",
+  "publishersNew": "Registrar nueva editorial",
+  "publishersCreateTitle": "Registrar Editorial",
+  "publishersEditTitle": "Editar Editorial",
+  "publishersSite": "Sitio web",
+  "publishersCreate": "Registrar",
+  "publishersEdit": "Editar",
+  "publishersDelete": "Eliminar Editorial",
+  "publishersDeleteConfirmation": "¿Seguro que quieres eliminar esta editorial?",
+  "publishersDeleteConflict": "No se puede eliminar una editorial con libros relacionados.",
+  "publishersInvalidData": "Comprueba los datos de la editorial.",
+  "publishersInvalidPhone": "Introduce un teléfono válido con código de área.",
+  "publishersInvalidSite": "Introduce una dirección web válida.",
+  "publishersConflict": "No se pudo completar la operación debido a un conflicto.",
+  "publishersNotFound": "Editorial no encontrada.",
+  "publishersError": "No se pudo completar la operación con la editorial.",
+  "publishersEmpty": "No se encontraron editoriales.",
+  "publishersSuccess": "Operación completada correctamente.",
+  "publishersShowing": "Mostrando de {start} a {end} de {total} editoriales",
+  "@publishersShowing": {
+    "placeholders": {
+      "start": {"type": "int"},
+      "end": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  }
 }

@@ -101,5 +101,31 @@
   "usersDetailsTitle": "Visualizar detalhes",
   "usersViewDetails": "Visualizar detalhes",
   "usersCreatedAt": "Data de criação",
-  "usersUpdatedAt": "Última atualização"
+  "usersUpdatedAt": "Última atualização",
+  "publishersSearch": "Buscar Editora por Nome",
+  "publishersNew": "Cadastrar nova editora",
+  "publishersCreateTitle": "Cadastrar Editora",
+  "publishersEditTitle": "Editar Editora",
+  "publishersSite": "Site",
+  "publishersCreate": "Cadastrar",
+  "publishersEdit": "Editar",
+  "publishersDelete": "Excluir Editora",
+  "publishersDeleteConfirmation": "Tem certeza de que deseja excluir esta editora?",
+  "publishersDeleteConflict": "Não é possível excluir uma editora que possui livros relacionados.",
+  "publishersInvalidData": "Verifique os dados informados da editora.",
+  "publishersInvalidPhone": "Informe um telefone com DDD válido.",
+  "publishersInvalidSite": "Informe um endereço de site válido.",
+  "publishersConflict": "Não foi possível concluir a operação devido a um conflito.",
+  "publishersNotFound": "Editora não encontrada.",
+  "publishersError": "Não foi possível concluir a operação com a editora.",
+  "publishersEmpty": "Nenhuma editora encontrada.",
+  "publishersSuccess": "Operação realizada com sucesso.",
+  "publishersShowing": "Mostrando {start} a {end} de {total} editoras",
+  "@publishersShowing": {
+    "placeholders": {
+      "start": {"type": "int"},
+      "end": {"type": "int"},
+      "total": {"type": "int"}
+    }
+  }
 }

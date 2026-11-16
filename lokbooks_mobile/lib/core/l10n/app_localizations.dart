@@ -663,6 +663,120 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Última atualização'**
   String get usersUpdatedAt;
+
+  /// No description provided for @publishersSearch.
+  ///
+  /// In pt, this message translates to:
+  /// **'Buscar Editora por Nome'**
+  String get publishersSearch;
+
+  /// No description provided for @publishersNew.
+  ///
+  /// In pt, this message translates to:
+  /// **'Cadastrar nova editora'**
+  String get publishersNew;
+
+  /// No description provided for @publishersCreateTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Cadastrar Editora'**
+  String get publishersCreateTitle;
+
+  /// No description provided for @publishersEditTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Editar Editora'**
+  String get publishersEditTitle;
+
+  /// No description provided for @publishersSite.
+  ///
+  /// In pt, this message translates to:
+  /// **'Site'**
+  String get publishersSite;
+
+  /// No description provided for @publishersCreate.
+  ///
+  /// In pt, this message translates to:
+  /// **'Cadastrar'**
+  String get publishersCreate;
+
+  /// No description provided for @publishersEdit.
+  ///
+  /// In pt, this message translates to:
+  /// **'Editar'**
+  String get publishersEdit;
+
+  /// No description provided for @publishersDelete.
+  ///
+  /// In pt, this message translates to:
+  /// **'Excluir Editora'**
+  String get publishersDelete;
+
+  /// No description provided for @publishersDeleteConfirmation.
+  ///
+  /// In pt, this message translates to:
+  /// **'Tem certeza de que deseja excluir esta editora?'**
+  String get publishersDeleteConfirmation;
+
+  /// No description provided for @publishersDeleteConflict.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não é possível excluir uma editora que possui livros relacionados.'**
+  String get publishersDeleteConflict;
+
+  /// No description provided for @publishersInvalidData.
+  ///
+  /// In pt, this message translates to:
+  /// **'Verifique os dados informados da editora.'**
+  String get publishersInvalidData;
+
+  /// No description provided for @publishersInvalidPhone.
+  ///
+  /// In pt, this message translates to:
+  /// **'Informe um telefone com DDD válido.'**
+  String get publishersInvalidPhone;
+
+  /// No description provided for @publishersInvalidSite.
+  ///
+  /// In pt, this message translates to:
+  /// **'Informe um endereço de site válido.'**
+  String get publishersInvalidSite;
+
+  /// No description provided for @publishersConflict.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível concluir a operação devido a um conflito.'**
+  String get publishersConflict;
+
+  /// No description provided for @publishersNotFound.
+  ///
+  /// In pt, this message translates to:
+  /// **'Editora não encontrada.'**
+  String get publishersNotFound;
+
+  /// No description provided for @publishersError.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível concluir a operação com a editora.'**
+  String get publishersError;
+
+  /// No description provided for @publishersEmpty.
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhuma editora encontrada.'**
+  String get publishersEmpty;
+
+  /// No description provided for @publishersSuccess.
+  ///
+  /// In pt, this message translates to:
+  /// **'Operação realizada com sucesso.'**
+  String get publishersSuccess;
+
+  /// No description provided for @publishersShowing.
+  ///
+  /// In pt, this message translates to:
+  /// **'Mostrando {start} a {end} de {total} editoras'**
+  String publishersShowing(int start, int end, int total);
 }
 
 class _AppLocalizationsDelegate

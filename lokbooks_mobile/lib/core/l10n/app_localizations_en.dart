@@ -306,4 +306,67 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get usersUpdatedAt => 'Last updated';
+
+  @override
+  String get publishersSearch => 'Search publishers by name';
+
+  @override
+  String get publishersNew => 'Register new publisher';
+
+  @override
+  String get publishersCreateTitle => 'Register Publisher';
+
+  @override
+  String get publishersEditTitle => 'Edit Publisher';
+
+  @override
+  String get publishersSite => 'Website';
+
+  @override
+  String get publishersCreate => 'Register';
+
+  @override
+  String get publishersEdit => 'Edit';
+
+  @override
+  String get publishersDelete => 'Delete Publisher';
+
+  @override
+  String get publishersDeleteConfirmation =>
+      'Are you sure you want to delete this publisher?';
+
+  @override
+  String get publishersDeleteConflict =>
+      'A publisher with related books cannot be deleted.';
+
+  @override
+  String get publishersInvalidData => 'Check the publisher information.';
+
+  @override
+  String get publishersInvalidPhone =>
+      'Enter a valid phone number with area code.';
+
+  @override
+  String get publishersInvalidSite => 'Enter a valid website address.';
+
+  @override
+  String get publishersConflict =>
+      'The operation could not be completed due to a conflict.';
+
+  @override
+  String get publishersNotFound => 'Publisher not found.';
+
+  @override
+  String get publishersError => 'Could not complete the publisher operation.';
+
+  @override
+  String get publishersEmpty => 'No publishers found.';
+
+  @override
+  String get publishersSuccess => 'Operation completed successfully.';
+
+  @override
+  String publishersShowing(int start, int end, int total) {
+    return 'Showing $start to $end of $total publishers';
+  }
 }

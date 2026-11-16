@@ -7,6 +7,7 @@ import '../../modules/auth/controllers/auth_controller.dart';
 import '../../modules/auth/models/user_role.dart';
 import '../../modules/home/presentation/pages/dashboard_page.dart';
 import '../../modules/users/presentation/pages/users_page.dart';
+import '../../modules/publishers/presentation/pages/publishers_page.dart';
 import 'app_header.dart';
 import 'language_dialog.dart';
 import 'profile_menu.dart';
@@ -101,7 +102,7 @@ class _MainShellState extends State<MainShell> {
   Future<void> _changeLanguage() async {
     final selected = await showDialog<Locale>(
       context: context,
-      builder: (dialogContext) => LanguageDialog(
+      builder: (_) => LanguageDialog(
         currentLocale: widget.locale,
       ),
     );
@@ -159,12 +160,9 @@ class _MainShellState extends State<MainShell> {
     return switch (_selectedSection) {
       AdminSection.dashboard => const DashboardPage(),
       AdminSection.users => const UsersPage(),
+      AdminSection.publishers => const PublishersPage(),
       AdminSection.loans => _PendingModulePage(
           title: l10n.menuLoans,
-          message: l10n.moduleUnderDevelopment,
-        ),
-      AdminSection.publishers => _PendingModulePage(
-          title: l10n.menuPublishers,
           message: l10n.moduleUnderDevelopment,
         ),
       AdminSection.books => _PendingModulePage(
