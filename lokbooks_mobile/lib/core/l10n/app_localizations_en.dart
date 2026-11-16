@@ -224,4 +224,86 @@ class AppLocalizationsEn extends AppLocalizations {
 
   @override
   String get languageDialogSave => 'SAVE';
+
+  @override
+  String get usersSearchHint => 'Search users by name';
+
+  @override
+  String get usersName => 'Name';
+
+  @override
+  String get usersCpf => 'CPF';
+
+  @override
+  String get usersStatus => 'Status';
+
+  @override
+  String get usersActive => 'Active';
+
+  @override
+  String get usersInactive => 'Inactive';
+
+  @override
+  String get usersActions => 'User actions';
+
+  @override
+  String get usersPrevious => 'Previous';
+
+  @override
+  String get usersNext => 'Next';
+
+  @override
+  String usersShowing(int start, int end, int total) {
+    return 'Showing $start to $end of $total users';
+  }
+
+  @override
+  String get usersEmpty => 'No users found.';
+
+  @override
+  String get usersRetry => 'Try again';
+
+  @override
+  String get usersLoadError => 'Could not load users.';
+
+  @override
+  String get usersUnauthorized =>
+      'Your session has expired. Please sign in again.';
+
+  @override
+  String get usersForbidden =>
+      'You do not have permission to access this feature.';
+
+  @override
+  String get usersActivate => 'Activate member';
+
+  @override
+  String get usersInactivate => 'Deactivate member';
+
+  @override
+  String get usersConfirmActivate => 'Do you want to activate this member?';
+
+  @override
+  String get usersConfirmInactivate => 'Do you want to deactivate this member?';
+
+  @override
+  String get usersCancel => 'Cancel';
+
+  @override
+  String get usersConfirm => 'Confirm';
+
+  @override
+  String get usersStatusUpdated => 'Status updated successfully.';
+
+  @override
+  String get usersDetailsTitle => 'View details';
+
+  @override
+  String get usersViewDetails => 'View details';
+
+  @override
+  String get usersCreatedAt => 'Created on';
+
+  @override
+  String get usersUpdatedAt => 'Last updated';
 }

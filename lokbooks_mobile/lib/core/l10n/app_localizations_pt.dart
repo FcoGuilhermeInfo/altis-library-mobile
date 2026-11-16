@@ -225,4 +225,85 @@ class AppLocalizationsPt extends AppLocalizations {
 
   @override
   String get languageDialogSave => 'SALVAR';
+
+  @override
+  String get usersSearchHint => 'Buscar usuário por nome';
+
+  @override
+  String get usersName => 'Nome';
+
+  @override
+  String get usersCpf => 'CPF';
+
+  @override
+  String get usersStatus => 'Status';
+
+  @override
+  String get usersActive => 'Ativo';
+
+  @override
+  String get usersInactive => 'Inativo';
+
+  @override
+  String get usersActions => 'Ações do usuário';
+
+  @override
+  String get usersPrevious => 'Voltar';
+
+  @override
+  String get usersNext => 'Próximo';
+
+  @override
+  String usersShowing(int start, int end, int total) {
+    return 'Mostrando $start a $end de $total usuários';
+  }
+
+  @override
+  String get usersEmpty => 'Nenhum usuário encontrado.';
+
+  @override
+  String get usersRetry => 'Tentar novamente';
+
+  @override
+  String get usersLoadError => 'Não foi possível carregar os usuários.';
+
+  @override
+  String get usersUnauthorized => 'Sua sessão expirou. Entre novamente.';
+
+  @override
+  String get usersForbidden =>
+      'Você não tem permissão para acessar esta funcionalidade.';
+
+  @override
+  String get usersActivate => 'Ativar locatário';
+
+  @override
+  String get usersInactivate => 'Inativar locatário';
+
+  @override
+  String get usersConfirmActivate => 'Deseja ativar este locatário?';
+
+  @override
+  String get usersConfirmInactivate => 'Deseja inativar este locatário?';
+
+  @override
+  String get usersCancel => 'Cancelar';
+
+  @override
+  String get usersConfirm => 'Confirmar';
+
+  @override
+  String get usersStatusUpdated => 'Status atualizado com sucesso.';
+
+  @override
+  String get usersDetailsTitle => 'Visualizar detalhes';
+
+  @override
+  String get usersViewDetails => 'Visualizar detalhes';
+
+  @override
+  String get usersCreatedAt => 'Data de criação';
+
+  @override
+  String get usersUpdatedAt => 'Última atualização';
 }
