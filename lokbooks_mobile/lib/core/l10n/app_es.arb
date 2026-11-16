@@ -127,5 +127,40 @@
       "end": {"type": "int"},
       "total": {"type": "int"}
     }
+  },
+  "booksSearch": "Buscar libros por título",
+  "booksNew": "Registrar nuevo libro",
+  "booksCreateTitle": "Registrar Libro",
+  "booksEditTitle": "Editar Libro",
+  "booksTitle": "Título",
+  "booksAuthor": "Autor",
+  "booksYear": "Año",
+  "booksPublisher": "Editorial",
+  "booksTotalQuantity": "Cantidad total",
+  "booksTotalShort": "Total",
+  "booksAvailableShort": "Disponible",
+  "booksBorrowedShort": "Prestada",
+  "booksCreate": "Registrar",
+  "booksEdit": "Editar",
+  "booksDelete": "Eliminar Libro",
+  "booksDeleteConfirmation": "¿Seguro que quieres eliminar este libro?",
+  "booksDeleteConflict": "No se puede eliminar un libro que tenga préstamos relacionados.",
+  "booksInvalidData": "Comprueba los datos del libro.",
+  "booksInvalidYear": "Introduce un año entre 1 y 32767.",
+  "booksInvalidQuantity": "La cantidad total debe ser mayor que cero.",
+  "booksQuantityBelowBorrowed": "La cantidad total no puede ser inferior a la cantidad prestada.",
+  "booksPublisherLoadError": "No se pudieron cargar las editoriales.",
+  "booksConflict": "Este libro puede estar registrado o existe un conflicto con los datos proporcionados.",
+  "booksNotFound": "Libro no encontrado.",
+  "booksError": "No se pudo completar la operación con el libro.",
+  "booksEmpty": "No se encontraron libros.",
+  "booksSuccess": "Operación completada correctamente.",
+  "booksShowing": "Mostrando de {start} a {end} de {total} libros",
+  "@booksShowing": {
+    "placeholders": {
+      "start": {"type": "int"},
+      "end": {"type": "int"},
+      "total": {"type": "int"}
+    }
   }
 }

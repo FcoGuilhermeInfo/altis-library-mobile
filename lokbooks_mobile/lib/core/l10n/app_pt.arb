@@ -127,5 +127,40 @@
       "end": {"type": "int"},
       "total": {"type": "int"}
     }
+  },
+  "booksSearch": "Buscar Livro por Nome",
+  "booksNew": "Cadastrar novo livro",
+  "booksCreateTitle": "Cadastrar Livro",
+  "booksEditTitle": "Editar Livro",
+  "booksTitle": "Título",
+  "booksAuthor": "Autor",
+  "booksYear": "Ano",
+  "booksPublisher": "Editora",
+  "booksTotalQuantity": "Quantidade total",
+  "booksTotalShort": "Total",
+  "booksAvailableShort": "Disponível",
+  "booksBorrowedShort": "Emprestada",
+  "booksCreate": "Cadastrar",
+  "booksEdit": "Editar",
+  "booksDelete": "Excluir Livro",
+  "booksDeleteConfirmation": "Tem certeza de que deseja excluir este livro?",
+  "booksDeleteConflict": "Não é possível excluir um livro que possui empréstimos relacionados.",
+  "booksInvalidData": "Verifique os dados informados do livro.",
+  "booksInvalidYear": "Informe um ano entre 1 e 32767.",
+  "booksInvalidQuantity": "A quantidade total deve ser maior que zero.",
+  "booksQuantityBelowBorrowed": "A quantidade total não pode ser menor que a quantidade emprestada.",
+  "booksPublisherLoadError": "Não foi possível carregar as editoras.",
+  "booksConflict": "Este livro já pode estar cadastrado ou existe um conflito com os dados informados.",
+  "booksNotFound": "Livro não encontrado.",
+  "booksError": "Não foi possível concluir a operação com o livro.",
+  "booksEmpty": "Nenhum livro encontrado.",
+  "booksSuccess": "Operação realizada com sucesso.",
+  "booksShowing": "Mostrando {start} a {end} de {total} livros",
+  "@booksShowing": {
+    "placeholders": {
+      "start": {"type": "int"},
+      "end": {"type": "int"},
+      "total": {"type": "int"}
+    }
   }
 }

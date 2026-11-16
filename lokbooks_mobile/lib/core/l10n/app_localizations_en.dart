@@ -369,4 +369,95 @@ class AppLocalizationsEn extends AppLocalizations {
   String publishersShowing(int start, int end, int total) {
     return 'Showing $start to $end of $total publishers';
   }
+
+  @override
+  String get booksSearch => 'Search books by title';
+
+  @override
+  String get booksNew => 'Register new book';
+
+  @override
+  String get booksCreateTitle => 'Register Book';
+
+  @override
+  String get booksEditTitle => 'Edit Book';
+
+  @override
+  String get booksTitle => 'Title';
+
+  @override
+  String get booksAuthor => 'Author';
+
+  @override
+  String get booksYear => 'Year';
+
+  @override
+  String get booksPublisher => 'Publisher';
+
+  @override
+  String get booksTotalQuantity => 'Total quantity';
+
+  @override
+  String get booksTotalShort => 'Total';
+
+  @override
+  String get booksAvailableShort => 'Available';
+
+  @override
+  String get booksBorrowedShort => 'Borrowed';
+
+  @override
+  String get booksCreate => 'Register';
+
+  @override
+  String get booksEdit => 'Edit';
+
+  @override
+  String get booksDelete => 'Delete Book';
+
+  @override
+  String get booksDeleteConfirmation =>
+      'Are you sure you want to delete this book?';
+
+  @override
+  String get booksDeleteConflict =>
+      'A book with related loans cannot be deleted.';
+
+  @override
+  String get booksInvalidData => 'Check the book information.';
+
+  @override
+  String get booksInvalidYear => 'Enter a year between 1 and 32767.';
+
+  @override
+  String get booksInvalidQuantity =>
+      'The total quantity must be greater than zero.';
+
+  @override
+  String get booksQuantityBelowBorrowed =>
+      'The total quantity cannot be less than the borrowed quantity.';
+
+  @override
+  String get booksPublisherLoadError => 'Could not load publishers.';
+
+  @override
+  String get booksConflict =>
+      'This book may already exist or there is a conflict with the provided information.';
+
+  @override
+  String get booksNotFound => 'Book not found.';
+
+  @override
+  String get booksError => 'Could not complete the book operation.';
+
+  @override
+  String get booksEmpty => 'No books found.';
+
+  @override
+  String get booksSuccess => 'Operation completed successfully.';
+
+  @override
+  String booksShowing(int start, int end, int total) {
+    return 'Showing $start to $end of $total books';
+  }
 }
