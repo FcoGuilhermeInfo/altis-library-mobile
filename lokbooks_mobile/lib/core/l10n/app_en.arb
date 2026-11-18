@@ -162,5 +162,42 @@
       "end": {"type": "int"},
       "total": {"type": "int"}
     }
+  },
+  "loansSearch": "Search loans by member",
+  "loansNew": "Register new loan",
+  "loansCreateTitle": "Create Loan",
+  "loansCreate": "Create Loan",
+  "loansDetailsTitle": "Loan Details",
+  "loansViewDetails": "View details",
+  "loansMember": "Library member",
+  "loansBook": "Book",
+  "loansBorrowedAt": "Loan Date",
+  "loansDueDate": "Expected Return",
+  "loansReturnedAt": "Return Date",
+  "loansSelectDate": "Select a date",
+  "loansBorrowed": "Borrowed",
+  "loansOverdue": "Overdue",
+  "loansReturned": "Completed",
+  "loansUnknown": "Unknown",
+  "loansReturn": "Confirm Return",
+  "loansReturnConfirmation": "Do you want to confirm the return of this book?",
+  "loansRecentTitle": "Recent Completed Loans",
+  "loansFullHistory": "View full history",
+  "loansHistoryTitle": "Loan History",
+  "loansEmptyHistory": "No completed loans found.",
+  "loansEmpty": "No active loans found.",
+  "loansOptionsLoadError": "Could not load members and books.",
+  "loansInvalidDueDate": "The expected return date must be in the future.",
+  "loansNotFound": "Loan not found.",
+  "loansOperationError": "Could not complete the operation.",
+  "loansCreatedSuccess": "Loan registered successfully.",
+  "loansReturnedSuccess": "Return confirmed successfully.",
+  "loansShowing": "Showing {start} to {end} of {total} loans",
+  "@loansShowing": {
+    "placeholders": {
+      "start": {"type": "int"},
+      "end": {"type": "int"},
+      "total": {"type": "int"}
+    }
   }
 }

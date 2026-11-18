@@ -162,5 +162,42 @@
       "end": {"type": "int"},
       "total": {"type": "int"}
     }
+  },
+  "loansSearch": "Buscar préstamos por usuario",
+  "loansNew": "Registrar nuevo préstamo",
+  "loansCreateTitle": "Realizar Préstamo",
+  "loansCreate": "Realizar Préstamo",
+  "loansDetailsTitle": "Detalles del Préstamo",
+  "loansViewDetails": "Ver detalles",
+  "loansMember": "Usuario",
+  "loansBook": "Libro",
+  "loansBorrowedAt": "Fecha del Préstamo",
+  "loansDueDate": "Devolución Prevista",
+  "loansReturnedAt": "Fecha de Devolución",
+  "loansSelectDate": "Selecciona una fecha",
+  "loansBorrowed": "Prestado",
+  "loansOverdue": "Atrasado",
+  "loansReturned": "Finalizado",
+  "loansUnknown": "Desconocido",
+  "loansReturn": "Confirmar Devolución",
+  "loansReturnConfirmation": "¿Quieres confirmar la devolución de este libro?",
+  "loansRecentTitle": "Últimos Préstamos Realizados",
+  "loansFullHistory": "Ver historial completo",
+  "loansHistoryTitle": "Historial de Préstamos",
+  "loansEmptyHistory": "No hay préstamos finalizados.",
+  "loansEmpty": "No se encontraron préstamos activos.",
+  "loansOptionsLoadError": "No se pudieron cargar usuarios y libros.",
+  "loansInvalidDueDate": "La devolución prevista debe ser futura.",
+  "loansNotFound": "Préstamo no encontrado.",
+  "loansOperationError": "No se pudo completar la operación.",
+  "loansCreatedSuccess": "Préstamo registrado correctamente.",
+  "loansReturnedSuccess": "Devolución confirmada correctamente.",
+  "loansShowing": "Mostrando de {start} a {end} de {total} préstamos",
+  "@loansShowing": {
+    "placeholders": {
+      "start": {"type": "int"},
+      "end": {"type": "int"},
+      "total": {"type": "int"}
+    }
   }
 }

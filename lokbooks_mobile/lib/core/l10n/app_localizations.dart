@@ -945,6 +945,186 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Mostrando {start} a {end} de {total} livros'**
   String booksShowing(int start, int end, int total);
+
+  /// No description provided for @loansSearch.
+  ///
+  /// In pt, this message translates to:
+  /// **'Buscar empréstimo por locatário'**
+  String get loansSearch;
+
+  /// No description provided for @loansNew.
+  ///
+  /// In pt, this message translates to:
+  /// **'Registrar novo empréstimo'**
+  String get loansNew;
+
+  /// No description provided for @loansCreateTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Realizar Empréstimo'**
+  String get loansCreateTitle;
+
+  /// No description provided for @loansCreate.
+  ///
+  /// In pt, this message translates to:
+  /// **'Realizar Empréstimo'**
+  String get loansCreate;
+
+  /// No description provided for @loansDetailsTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Detalhes do Empréstimo'**
+  String get loansDetailsTitle;
+
+  /// No description provided for @loansViewDetails.
+  ///
+  /// In pt, this message translates to:
+  /// **'Visualizar detalhes'**
+  String get loansViewDetails;
+
+  /// No description provided for @loansMember.
+  ///
+  /// In pt, this message translates to:
+  /// **'Locatário'**
+  String get loansMember;
+
+  /// No description provided for @loansBook.
+  ///
+  /// In pt, this message translates to:
+  /// **'Livro'**
+  String get loansBook;
+
+  /// No description provided for @loansBorrowedAt.
+  ///
+  /// In pt, this message translates to:
+  /// **'Data do Empréstimo'**
+  String get loansBorrowedAt;
+
+  /// No description provided for @loansDueDate.
+  ///
+  /// In pt, this message translates to:
+  /// **'Devolução Prevista'**
+  String get loansDueDate;
+
+  /// No description provided for @loansReturnedAt.
+  ///
+  /// In pt, this message translates to:
+  /// **'Data da Devolução'**
+  String get loansReturnedAt;
+
+  /// No description provided for @loansSelectDate.
+  ///
+  /// In pt, this message translates to:
+  /// **'Selecione uma data'**
+  String get loansSelectDate;
+
+  /// No description provided for @loansBorrowed.
+  ///
+  /// In pt, this message translates to:
+  /// **'Emprestado'**
+  String get loansBorrowed;
+
+  /// No description provided for @loansOverdue.
+  ///
+  /// In pt, this message translates to:
+  /// **'Atrasado'**
+  String get loansOverdue;
+
+  /// No description provided for @loansReturned.
+  ///
+  /// In pt, this message translates to:
+  /// **'Finalizado'**
+  String get loansReturned;
+
+  /// No description provided for @loansUnknown.
+  ///
+  /// In pt, this message translates to:
+  /// **'Desconhecido'**
+  String get loansUnknown;
+
+  /// No description provided for @loansReturn.
+  ///
+  /// In pt, this message translates to:
+  /// **'Confirmar Devolução'**
+  String get loansReturn;
+
+  /// No description provided for @loansReturnConfirmation.
+  ///
+  /// In pt, this message translates to:
+  /// **'Deseja confirmar a devolução deste livro?'**
+  String get loansReturnConfirmation;
+
+  /// No description provided for @loansRecentTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Últimos Empréstimos Realizados'**
+  String get loansRecentTitle;
+
+  /// No description provided for @loansFullHistory.
+  ///
+  /// In pt, this message translates to:
+  /// **'Ver histórico completo'**
+  String get loansFullHistory;
+
+  /// No description provided for @loansHistoryTitle.
+  ///
+  /// In pt, this message translates to:
+  /// **'Histórico de Empréstimos'**
+  String get loansHistoryTitle;
+
+  /// No description provided for @loansEmptyHistory.
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhum empréstimo finalizado.'**
+  String get loansEmptyHistory;
+
+  /// No description provided for @loansEmpty.
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhum empréstimo ativo encontrado.'**
+  String get loansEmpty;
+
+  /// No description provided for @loansOptionsLoadError.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível carregar locatários e livros.'**
+  String get loansOptionsLoadError;
+
+  /// No description provided for @loansInvalidDueDate.
+  ///
+  /// In pt, this message translates to:
+  /// **'A devolução prevista deve ser futura.'**
+  String get loansInvalidDueDate;
+
+  /// No description provided for @loansNotFound.
+  ///
+  /// In pt, this message translates to:
+  /// **'Empréstimo não encontrado.'**
+  String get loansNotFound;
+
+  /// No description provided for @loansOperationError.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível concluir a operação.'**
+  String get loansOperationError;
+
+  /// No description provided for @loansCreatedSuccess.
+  ///
+  /// In pt, this message translates to:
+  /// **'Empréstimo registrado com sucesso.'**
+  String get loansCreatedSuccess;
+
+  /// No description provided for @loansReturnedSuccess.
+  ///
+  /// In pt, this message translates to:
+  /// **'Devolução confirmada com sucesso.'**
+  String get loansReturnedSuccess;
+
+  /// No description provided for @loansShowing.
+  ///
+  /// In pt, this message translates to:
+  /// **'Mostrando {start} a {end} de {total} empréstimos'**
+  String loansShowing(int start, int end, int total);
 }
 
 class _AppLocalizationsDelegate

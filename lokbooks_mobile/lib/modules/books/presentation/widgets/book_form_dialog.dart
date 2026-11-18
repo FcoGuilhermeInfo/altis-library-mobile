@@ -5,6 +5,7 @@ import 'package:intl/intl.dart';
 
 import 'package:lokbooks_mobile/core/l10n/app_localizations.dart';
 import 'package:lokbooks_mobile/core/theme/app_colors.dart';
+import 'package:lokbooks_mobile/core/widgets/searchable_select_field.dart';
 import 'package:lokbooks_mobile/modules/books/models/book_model.dart';
 import 'package:lokbooks_mobile/modules/books/models/book_request.dart';
 import 'package:lokbooks_mobile/modules/books/services/book_service.dart';
@@ -33,11 +34,11 @@ class _BookFormDialogState extends State<BookFormDialog> {
   late final TextEditingController _yearController;
   late final TextEditingController _quantityController;
 
-  List<PublisherModel> _publishers = [];
-  String? _publisherName;
-  bool _loadingPublishers = true;
+  PublisherModel? _selectedPublisher;
+
   bool _isSaving = false;
-  bool _publisherLoadFailed = false;
+  bool _showPublisherValidation = false;
+  String? _error;
 
   bool get _isEditing => widget.book != null;
 
@@ -62,53 +63,22 @@ class _BookFormDialogState extends State<BookFormDialog> {
     _quantityController = TextEditingController(
       text: book?.totalQuantity.toString() ?? '',
     );
-
-    _publisherName = book?.publisherName;
-    _loadPublishers();
   }
 
-  Future<void> _loadPublishers() async {
-    setState(() {
-      _loadingPublishers = true;
-      _publisherLoadFailed = false;
-    });
+  Future<SearchResultPage<PublisherModel>> _searchPublishers(
+    String search,
+    int page,
+  ) async {
+    final result = await _publisherService.findAll(
+      search: search,
+      page: page,
+      size: 10,
+    );
 
-    try {
-      final publishers = <PublisherModel>[];
-      var page = 1;
-      var totalPages = 1;
-
-      do {
-        final result = await _publisherService.findAll(
-          page: page,
-          size: 100,
-        );
-
-        publishers.addAll(result.publishers);
-        totalPages = result.totalPages;
-        page++;
-      } while (page <= totalPages);
-
-      publishers.sort(
-        (a, b) => a.name.toLowerCase().compareTo(
-          b.name.toLowerCase(),
-        ),
-      );
-
-      if (!mounted) return;
-
-      setState(() {
-        _publishers = publishers;
-        _loadingPublishers = false;
-      });
-    } catch (_) {
-      if (!mounted) return;
-
-      setState(() {
-        _loadingPublishers = false;
-        _publisherLoadFailed = true;
-      });
-    }
+    return SearchResultPage<PublisherModel>(
+      items: result.publishers,
+      totalPages: result.totalPages,
+    );
   }
 
   InputDecoration _decoration(
@@ -158,18 +128,16 @@ class _BookFormDialogState extends State<BookFormDialog> {
     };
   }
 
-  void _showError(String message) {
-    ScaffoldMessenger.of(context)
-      ..hideCurrentSnackBar()
-      ..showSnackBar(
-        SnackBar(content: Text(message)),
-      );
-  }
-
   Future<void> _save() async {
-    if (_isSaving || _loadingPublishers ||
-        _publisherLoadFailed ||
-        !_formKey.currentState!.validate()) {
+    if (_isSaving) return;
+
+    setState(() {
+      _showPublisherValidation = true;
+      _error = null;
+    });
+
+    if (!_formKey.currentState!.validate() ||
+        _selectedPublisher == null) {
       return;
     }
 
@@ -178,9 +146,10 @@ class _BookFormDialogState extends State<BookFormDialog> {
 
     if (_isEditing &&
         quantity < widget.book!.borrowedQuantity) {
-      _showError(
-        AppLocalizations.of(context)!.booksQuantityBelowBorrowed,
-      );
+      setState(() {
+        _error = AppLocalizations.of(context)!
+            .booksQuantityBelowBorrowed;
+      });
       return;
     }
 
@@ -193,12 +162,15 @@ class _BookFormDialogState extends State<BookFormDialog> {
         title: _titleController.text.trim(),
         author: _authorController.text.trim(),
         releaseYear: year,
-        publisherName: _publisherName!,
+        publisherName: _selectedPublisher!.name,
         totalQuantity: quantity,
       );
 
       if (_isEditing) {
-        await _bookService.update(widget.book!.id, request);
+        await _bookService.update(
+          widget.book!.id,
+          request,
+        );
       } else {
         await _bookService.create(request);
       }
@@ -206,12 +178,18 @@ class _BookFormDialogState extends State<BookFormDialog> {
       if (!mounted) return;
 
       Navigator.of(context).pop(true);
-    } on BookException catch (error) {
+    } on BookException catch (exception) {
       if (!mounted) return;
-      _showError(_errorMessage(error.error));
+
+      setState(() {
+        _error = _errorMessage(exception.error);
+      });
     } catch (_) {
       if (!mounted) return;
-      _showError(AppLocalizations.of(context)!.booksError);
+
+      setState(() {
+        _error = AppLocalizations.of(context)!.booksError;
+      });
     } finally {
       if (mounted) {
         setState(() {
@@ -258,17 +236,20 @@ class _BookFormDialogState extends State<BookFormDialog> {
       if (!mounted) return;
 
       Navigator.of(context).pop(true);
-    } on BookException catch (error) {
+    } on BookException catch (exception) {
       if (!mounted) return;
 
-      _showError(
-        error.error == BookError.conflict
+      setState(() {
+        _error = exception.error == BookError.conflict
             ? l10n.booksDeleteConflict
-            : _errorMessage(error.error),
-      );
+            : _errorMessage(exception.error);
+      });
     } catch (_) {
       if (!mounted) return;
-      _showError(l10n.booksError);
+
+      setState(() {
+        _error = l10n.booksError;
+      });
     } finally {
       if (mounted) {
         setState(() {
@@ -282,11 +263,11 @@ class _BookFormDialogState extends State<BookFormDialog> {
     final language =
         Localizations.localeOf(context).languageCode;
 
-    final pattern = language == 'en'
-        ? 'MM/dd/yyyy, HH:mm'
-        : 'dd/MM/yyyy, HH:mm';
-
-    return DateFormat(pattern).format(date);
+    return DateFormat(
+      language == 'en'
+          ? 'MM/dd/yyyy, HH:mm'
+          : 'dd/MM/yyyy, HH:mm',
+    ).format(date);
   }
 
   Widget _dateInfo(
@@ -299,8 +280,8 @@ class _BookFormDialogState extends State<BookFormDialog> {
       children: [
         Icon(
           icon,
-          color: AppColors.primary,
           size: 18,
+          color: AppColors.primary,
         ),
         const SizedBox(width: 7),
         Expanded(
@@ -344,16 +325,6 @@ class _BookFormDialogState extends State<BookFormDialog> {
     final l10n = AppLocalizations.of(context)!;
     final book = widget.book;
 
-    final publisherNames = _publishers
-        .map((publisher) => publisher.name)
-        .toSet()
-        .toList();
-
-    final selectedPublisher =
-        publisherNames.contains(_publisherName)
-            ? _publisherName
-            : null;
-
     return Dialog(
       backgroundColor: Colors.white,
       insetPadding: const EdgeInsets.symmetric(
@@ -369,7 +340,12 @@ class _BookFormDialogState extends State<BookFormDialog> {
           maxHeight: MediaQuery.sizeOf(context).height * 0.85,
         ),
         child: SingleChildScrollView(
-          padding: const EdgeInsets.fromLTRB(18, 12, 18, 22),
+          padding: const EdgeInsets.fromLTRB(
+            18,
+            12,
+            18,
+            22,
+          ),
           child: Column(
             children: [
               Row(
@@ -382,9 +358,9 @@ class _BookFormDialogState extends State<BookFormDialog> {
                           : l10n.booksCreateTitle,
                       textAlign: TextAlign.center,
                       style: const TextStyle(
+                        color: AppColors.primary,
                         fontSize: 23,
                         fontWeight: FontWeight.bold,
-                        color: AppColors.primary,
                       ),
                     ),
                   ),
@@ -415,7 +391,8 @@ class _BookFormDialogState extends State<BookFormDialog> {
                     TextFormField(
                       controller: _authorController,
                       enabled: !_isSaving,
-                      textCapitalization: TextCapitalization.words,
+                      textCapitalization:
+                          TextCapitalization.words,
                       textInputAction: TextInputAction.next,
                       decoration: _decoration(
                         l10n.booksAuthor,
@@ -454,55 +431,33 @@ class _BookFormDialogState extends State<BookFormDialog> {
                       },
                     ),
                     const SizedBox(height: 16),
-                    if (_loadingPublishers)
-                      const Padding(
-                        padding: EdgeInsets.all(12),
-                        child: CircularProgressIndicator(),
-                      )
-                    else if (_publisherLoadFailed)
-                      Column(
-                        children: [
-                          Text(l10n.booksPublisherLoadError),
-                          TextButton(
-                            onPressed: _loadPublishers,
-                            child: Text(l10n.usersRetry),
-                          ),
-                        ],
-                      )
-                    else
-                      DropdownButtonFormField<String>(
-                        initialValue: selectedPublisher,
-                        isExpanded: true,
-                        decoration: _decoration(
-                          l10n.booksPublisher,
-                          Icons.business_outlined,
-                        ),
-                        items: publisherNames
-                            .map(
-                              (name) => DropdownMenuItem(
-                                value: name,
-                                child: Text(
-                                  name,
-                                  overflow: TextOverflow.ellipsis,
-                                ),
-                              ),
-                            )
-                            .toList(),
-                        onChanged: _isSaving
-                            ? null
-                            : (value) {
-                                setState(() {
-                                  _publisherName = value;
-                                });
-                              },
-                        validator: (value) {
-                          if (value == null || value.isEmpty) {
-                            return l10n.registerRequired;
-                          }
-
-                          return null;
-                        },
-                      ),
+                    SearchableSelectField<PublisherModel>(
+                      label: l10n.booksPublisher,
+                      icon: Icons.business_outlined,
+                      enabled: !_isSaving,
+                      emptyMessage: l10n.publishersEmpty,
+                      errorMessage:
+                          l10n.booksPublisherLoadError,
+                      retryLabel: l10n.usersRetry,
+                      previousLabel: l10n.usersPrevious,
+                      nextLabel: l10n.usersNext,
+                      search: _searchPublishers,
+                      titleOf: (publisher) => publisher.name,
+                      subtitleOf: (publisher) =>
+                          publisher.email,
+                      canSelect: (publisher) => true,
+                      onSelected: (publisher) {
+                        setState(() {
+                          _selectedPublisher = publisher;
+                          _error = null;
+                        });
+                      },
+                      validationError:
+                          _showPublisherValidation &&
+                                  _selectedPublisher == null
+                              ? l10n.registerRequired
+                              : null,
+                    ),
                     const SizedBox(height: 16),
                     TextFormField(
                       controller: _quantityController,
@@ -563,6 +518,14 @@ class _BookFormDialogState extends State<BookFormDialog> {
                   ],
                 ),
               ],
+              if (_error != null) ...[
+                const SizedBox(height: 16),
+                Text(
+                  _error!,
+                  textAlign: TextAlign.center,
+                  style: const TextStyle(color: Colors.red),
+                ),
+              ],
               const SizedBox(height: 30),
               if (_isEditing)
                 Row(
@@ -599,10 +562,7 @@ class _BookFormDialogState extends State<BookFormDialog> {
 
   Widget _saveButton(AppLocalizations l10n) {
     return ElevatedButton(
-      onPressed: _isSaving || _loadingPublishers ||
-              _publisherLoadFailed || _publishers.isEmpty
-          ? null
-          : _save,
+      onPressed: _isSaving ? null : _save,
       style: ElevatedButton.styleFrom(
         backgroundColor: AppColors.primary,
         foregroundColor: Colors.white,

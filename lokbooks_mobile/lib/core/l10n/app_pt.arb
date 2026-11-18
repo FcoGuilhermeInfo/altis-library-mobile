@@ -162,5 +162,42 @@
       "end": {"type": "int"},
       "total": {"type": "int"}
     }
+  },
+  "loansSearch": "Buscar empréstimo por locatário",
+  "loansNew": "Registrar novo empréstimo",
+  "loansCreateTitle": "Realizar Empréstimo",
+  "loansCreate": "Realizar Empréstimo",
+  "loansDetailsTitle": "Detalhes do Empréstimo",
+  "loansViewDetails": "Visualizar detalhes",
+  "loansMember": "Locatário",
+  "loansBook": "Livro",
+  "loansBorrowedAt": "Data do Empréstimo",
+  "loansDueDate": "Devolução Prevista",
+  "loansReturnedAt": "Data da Devolução",
+  "loansSelectDate": "Selecione uma data",
+  "loansBorrowed": "Emprestado",
+  "loansOverdue": "Atrasado",
+  "loansReturned": "Finalizado",
+  "loansUnknown": "Desconhecido",
+  "loansReturn": "Confirmar Devolução",
+  "loansReturnConfirmation": "Deseja confirmar a devolução deste livro?",
+  "loansRecentTitle": "Últimos Empréstimos Realizados",
+  "loansFullHistory": "Ver histórico completo",
+  "loansHistoryTitle": "Histórico de Empréstimos",
+  "loansEmptyHistory": "Nenhum empréstimo finalizado.",
+  "loansEmpty": "Nenhum empréstimo ativo encontrado.",
+  "loansOptionsLoadError": "Não foi possível carregar locatários e livros.",
+  "loansInvalidDueDate": "A devolução prevista deve ser futura.",
+  "loansNotFound": "Empréstimo não encontrado.",
+  "loansOperationError": "Não foi possível concluir a operação.",
+  "loansCreatedSuccess": "Empréstimo registrado com sucesso.",
+  "loansReturnedSuccess": "Devolução confirmada com sucesso.",
+  "loansShowing": "Mostrando {start} a {end} de {total} empréstimos",
+  "@loansShowing": {
+    "placeholders": {
+      "start": {"type": "int"},
+      "end": {"type": "int"},
+      "total": {"type": "int"}
+    }
   }
 }

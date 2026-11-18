@@ -460,4 +460,98 @@ class AppLocalizationsEn extends AppLocalizations {
   String booksShowing(int start, int end, int total) {
     return 'Showing $start to $end of $total books';
   }
+
+  @override
+  String get loansSearch => 'Search loans by member';
+
+  @override
+  String get loansNew => 'Register new loan';
+
+  @override
+  String get loansCreateTitle => 'Create Loan';
+
+  @override
+  String get loansCreate => 'Create Loan';
+
+  @override
+  String get loansDetailsTitle => 'Loan Details';
+
+  @override
+  String get loansViewDetails => 'View details';
+
+  @override
+  String get loansMember => 'Library member';
+
+  @override
+  String get loansBook => 'Book';
+
+  @override
+  String get loansBorrowedAt => 'Loan Date';
+
+  @override
+  String get loansDueDate => 'Expected Return';
+
+  @override
+  String get loansReturnedAt => 'Return Date';
+
+  @override
+  String get loansSelectDate => 'Select a date';
+
+  @override
+  String get loansBorrowed => 'Borrowed';
+
+  @override
+  String get loansOverdue => 'Overdue';
+
+  @override
+  String get loansReturned => 'Completed';
+
+  @override
+  String get loansUnknown => 'Unknown';
+
+  @override
+  String get loansReturn => 'Confirm Return';
+
+  @override
+  String get loansReturnConfirmation =>
+      'Do you want to confirm the return of this book?';
+
+  @override
+  String get loansRecentTitle => 'Recent Completed Loans';
+
+  @override
+  String get loansFullHistory => 'View full history';
+
+  @override
+  String get loansHistoryTitle => 'Loan History';
+
+  @override
+  String get loansEmptyHistory => 'No completed loans found.';
+
+  @override
+  String get loansEmpty => 'No active loans found.';
+
+  @override
+  String get loansOptionsLoadError => 'Could not load members and books.';
+
+  @override
+  String get loansInvalidDueDate =>
+      'The expected return date must be in the future.';
+
+  @override
+  String get loansNotFound => 'Loan not found.';
+
+  @override
+  String get loansOperationError => 'Could not complete the operation.';
+
+  @override
+  String get loansCreatedSuccess => 'Loan registered successfully.';
+
+  @override
+  String get loansReturnedSuccess => 'Return confirmed successfully.';
+
+  @override
+  String loansShowing(int start, int end, int total) {
+    return 'Showing $start to $end of $total loans';
+  }
 }
