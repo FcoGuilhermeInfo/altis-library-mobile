@@ -1,9 +1,10 @@
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import 'package:lokbooks_mobile/core/l10n/app_localizations.dart';
+import 'package:lokbooks_mobile/core/services/routes/app_router.dart';
 import 'package:lokbooks_mobile/core/widgets/app_header.dart';
-import 'package:lokbooks_mobile/modules/auth/presentation/pages/reset_password_page.dart';
 import 'package:lokbooks_mobile/modules/auth/presentation/widgets/forgot_password_form.dart';
 
 class ForgotPasswordPage extends StatelessWidget {
@@ -13,15 +14,14 @@ class ForgotPasswordPage extends StatelessWidget {
     BuildContext context,
     String token,
   ) async {
-    final success = await Navigator.of(context).push<bool>(
-      MaterialPageRoute(
-        builder: (_) => ResetPasswordPage(token: token),
-      ),
+    final success = await context.push<bool>(
+      AppRoutes.resetPassword,
+      extra: token,
     );
 
     if (!context.mounted || success != true) return;
 
-    Navigator.of(context).pop(true);
+    context.pop(true);
   }
 
   @override

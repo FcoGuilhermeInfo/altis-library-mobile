@@ -1,38 +1,28 @@
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import '../l10n/app_localizations.dart';
+import '../services/routes/app_router.dart';
 import '../theme/app_colors.dart';
 import '../../modules/auth/controllers/auth_controller.dart';
 import '../../modules/auth/models/user_role.dart';
-import '../../modules/books/presentation/pages/books_page.dart';
-import '../../modules/home/presentation/pages/dashboard_page.dart';
-import '../../modules/loans/presentation/pages/loans_page.dart';
-import '../../modules/profile/presentation/pages/profile_page.dart';
-import '../../modules/publishers/presentation/pages/publishers_page.dart';
-import '../../modules/users/presentation/pages/users_page.dart';
 import 'app_header.dart';
 import 'language_dialog.dart';
 import 'profile_menu.dart';
-
-enum AdminSection {
-  dashboard,
-  loans,
-  users,
-  publishers,
-  books,
-}
 
 class MainShell extends StatefulWidget {
   final AuthController authController;
   final Locale locale;
   final ValueChanged<Locale> onLocaleChanged;
+  final Widget child;
 
   const MainShell({
     super.key,
     required this.authController,
     required this.locale,
     required this.onLocaleChanged,
+    required this.child,
   });
 
   @override
@@ -40,55 +30,20 @@ class MainShell extends StatefulWidget {
 }
 
 class _MainShellState extends State<MainShell> {
-  AdminSection _selectedSection = AdminSection.dashboard;
-
-  bool _showingProfile = false;
   bool _isLoggingOut = false;
 
-  @override
-  void initState() {
-    super.initState();
-    widget.authController.addListener(_onAuthChanged);
-  }
-
-  @override
-  void didUpdateWidget(covariant MainShell oldWidget) {
-    super.didUpdateWidget(oldWidget);
-
-    if (oldWidget.authController != widget.authController) {
-      oldWidget.authController.removeListener(_onAuthChanged);
-      widget.authController.addListener(_onAuthChanged);
-    }
-  }
-
-  @override
-  void dispose() {
-    widget.authController.removeListener(_onAuthChanged);
-    super.dispose();
-  }
-
-  void _onAuthChanged() {
-    if (!mounted) return;
-
-    setState(() {});
-  }
-
-  void _selectSection(AdminSection section) {
+  void _navigate(String route) {
     Navigator.of(context).pop();
-
-    setState(() {
-      _selectedSection = section;
-      _showingProfile = false;
-    });
+    context.go(route);
   }
 
   Widget _menuItem({
-    required AdminSection section,
+    required String route,
     required IconData icon,
     required String title,
+    required String currentPath,
   }) {
-    final selected =
-        !_showingProfile && _selectedSection == section;
+    final selected = currentPath == route;
 
     return ListTile(
       selected: selected,
@@ -106,19 +61,12 @@ class _MainShellState extends State<MainShell> {
           fontWeight: FontWeight.w300,
         ),
       ),
-      onTap: () => _selectSection(section),
+      onTap: () => _navigate(route),
     );
   }
 
   void _openProfile() {
-    setState(() {
-      _showingProfile = true;
-    });
-
-    if (widget.authController.profile == null &&
-        !widget.authController.isLoadingProfile) {
-      widget.authController.refreshProfile();
-    }
+    context.go(AppRoutes.profile);
   }
 
   Future<void> _changeLanguage() async {
@@ -175,26 +123,6 @@ class _MainShellState extends State<MainShell> {
     }
   }
 
-  Widget _buildContent(bool isAdmin) {
-    if (_showingProfile) {
-      return ProfilePage(
-        authController: widget.authController,
-      );
-    }
-
-    if (!isAdmin) {
-      return const DashboardPage();
-    }
-
-    return switch (_selectedSection) {
-      AdminSection.dashboard => const DashboardPage(),
-      AdminSection.loans => const LoansPage(),
-      AdminSection.users => const UsersPage(),
-      AdminSection.publishers => const PublishersPage(),
-      AdminSection.books => const BooksPage(),
-    };
-  }
-
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
@@ -205,6 +133,9 @@ class _MainShellState extends State<MainShell> {
     final roleLabel = isAdmin
         ? l10n.roleAdmin
         : l10n.roleUser;
+
+    final currentPath =
+        GoRouterState.of(context).uri.path;
 
     return Scaffold(
       appBar: AppHeader(
@@ -221,10 +152,13 @@ class _MainShellState extends State<MainShell> {
           ),
         ),
         actions: [
-          ProfileMenu(
-            userName: widget.authController.userName,
-            roleLabel: roleLabel,
-            onSelected: _handleProfileAction,
+          ListenableBuilder(
+            listenable: widget.authController,
+            builder: (context, child) => ProfileMenu(
+              userName: widget.authController.userName,
+              roleLabel: roleLabel,
+              onSelected: _handleProfileAction,
+            ),
           ),
         ],
       ),
@@ -252,31 +186,36 @@ class _MainShellState extends State<MainShell> {
                     padding: const EdgeInsets.only(top: 12),
                     children: [
                       _menuItem(
-                        section: AdminSection.dashboard,
+                        route: AppRoutes.dashboard,
                         icon: Icons.home,
                         title: l10n.menuDashboard,
+                        currentPath: currentPath,
                       ),
                       if (isAdmin) ...[
                         const SizedBox(height: 8),
                         _menuItem(
-                          section: AdminSection.loans,
+                          route: AppRoutes.loans,
                           icon: Icons.handshake,
                           title: l10n.menuLoans,
+                          currentPath: currentPath,
                         ),
                         _menuItem(
-                          section: AdminSection.users,
+                          route: AppRoutes.users,
                           icon: Icons.people,
                           title: l10n.menuUsers,
+                          currentPath: currentPath,
                         ),
                         _menuItem(
-                          section: AdminSection.publishers,
+                          route: AppRoutes.publishers,
                           icon: Icons.business,
                           title: l10n.menuPublishers,
+                          currentPath: currentPath,
                         ),
                         _menuItem(
-                          section: AdminSection.books,
+                          route: AppRoutes.books,
                           icon: Icons.menu_book,
                           title: l10n.menuBooks,
+                          currentPath: currentPath,
                         ),
                       ],
                     ],
@@ -287,7 +226,7 @@ class _MainShellState extends State<MainShell> {
           ),
         ),
       ),
-      body: _buildContent(isAdmin),
+      body: widget.child,
     );
   }
 }
