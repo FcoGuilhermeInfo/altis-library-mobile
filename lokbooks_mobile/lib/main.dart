@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import 'core/l10n/app_localizations.dart';
+import 'core/services/routes/app_router.dart';
 import 'core/theme/app_theme.dart';
-import 'core/widgets/main_shell.dart';
 import 'modules/auth/controllers/auth_controller.dart';
-import 'modules/auth/presentation/pages/login_page.dart';
 
 void main() {
   runApp(const LokBooksApp());
@@ -20,11 +20,21 @@ class LokBooksApp extends StatefulWidget {
 
 class _LokBooksAppState extends State<LokBooksApp> {
   final AuthController _authController = AuthController();
+
+  late final GoRouter _router;
+
   Locale _locale = const Locale('pt');
 
   @override
   void initState() {
     super.initState();
+
+    _router = createAppRouter(
+      authController: _authController,
+      getLocale: () => _locale,
+      onLocaleChanged: _changeLocale,
+    );
+
     _authController.restoreSession();
   }
 
@@ -36,13 +46,14 @@ class _LokBooksAppState extends State<LokBooksApp> {
 
   @override
   void dispose() {
+    _router.dispose();
     _authController.dispose();
     super.dispose();
   }
 
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
+    return MaterialApp.router(
       title: 'LokBooks',
       debugShowCheckedModeBanner: false,
       theme: AppTheme.light,
@@ -50,30 +61,7 @@ class _LokBooksAppState extends State<LokBooksApp> {
       localizationsDelegates:
           AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: ListenableBuilder(
-        listenable: _authController,
-        builder: (context, child) {
-          if (_authController.isRestoring) {
-            return const Scaffold(
-              body: Center(
-                child: CircularProgressIndicator(),
-              ),
-            );
-          }
-
-          if (_authController.isAuthenticated) {
-            return MainShell(
-              authController: _authController,
-              locale: _locale,
-              onLocaleChanged: _changeLocale,
-            );
-          }
-
-          return LoginPage(
-            authController: _authController,
-          );
-        },
-      ),
+      routerConfig: _router,
     );
   }
 }

@@ -1,11 +1,11 @@
 
 import 'package:flutter/material.dart';
+import 'package:go_router/go_router.dart';
 
 import 'package:lokbooks_mobile/core/l10n/app_localizations.dart';
+import 'package:lokbooks_mobile/core/services/routes/app_router.dart';
 import 'package:lokbooks_mobile/core/widgets/app_header.dart';
 import 'package:lokbooks_mobile/modules/auth/controllers/auth_controller.dart';
-import 'package:lokbooks_mobile/modules/auth/presentation/pages/forgot_password_page.dart';
-import 'package:lokbooks_mobile/modules/auth/presentation/pages/register_page.dart';
 import 'package:lokbooks_mobile/modules/auth/presentation/widgets/login_form.dart';
 
 class LoginPage extends StatelessWidget {
@@ -17,10 +17,8 @@ class LoginPage extends StatelessWidget {
   });
 
   Future<void> _openRegister(BuildContext context) async {
-    final registered = await Navigator.of(context).push<bool>(
-      MaterialPageRoute(
-        builder: (_) => const RegisterPage(),
-      ),
+    final registered = await context.push<bool>(
+      AppRoutes.register,
     );
 
     if (!context.mounted || registered != true) return;
@@ -34,10 +32,8 @@ class LoginPage extends StatelessWidget {
   Future<void> _openForgotPassword(
     BuildContext context,
   ) async {
-    final resetCompleted = await Navigator.of(context).push<bool>(
-      MaterialPageRoute(
-        builder: (_) => const ForgotPasswordPage(),
-      ),
+    final resetCompleted = await context.push<bool>(
+      AppRoutes.forgotPassword,
     );
 
     if (!context.mounted || resetCompleted != true) return;
@@ -103,11 +99,13 @@ class LoginPage extends StatelessWidget {
                       const SizedBox(height: 25),
                       Wrap(
                         alignment: WrapAlignment.center,
-                        crossAxisAlignment: WrapCrossAlignment.center,
+                        crossAxisAlignment:
+                            WrapCrossAlignment.center,
                         children: [
                           Text(l10n.loginNoAccount),
                           TextButton(
-                            onPressed: () => _openRegister(context),
+                            onPressed: () =>
+                                _openRegister(context),
                             child: Text(
                               l10n.loginRegister,
                               style: const TextStyle(
