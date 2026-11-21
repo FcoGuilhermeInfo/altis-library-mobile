@@ -62,6 +62,14 @@ GoRouter createAppRouter({
       }
 
       if (!authController.isAuthenticated) {
+        if (path == AppRoutes.resetPassword) {
+          final token = state.extra;
+
+          if (token is! String || token.isEmpty) {
+            return AppRoutes.forgotPassword;
+          }
+        }
+
         if (publicPaths.contains(path)) {
           return null;
         }
@@ -135,8 +143,9 @@ GoRouter createAppRouter({
         routes: [
           GoRoute(
             path: AppRoutes.dashboard,
-            builder: (context, state) =>
-                const DashboardPage(),
+            builder: (context, state) => DashboardPage(
+              authController: authController,
+            ),
           ),
           GoRoute(
             path: AppRoutes.profile,
