@@ -224,5 +224,30 @@
   "profileSaveError": "No se pudieron guardar los cambios.",
   "profilePasswordError": "No se pudo cambiar la contraseña. Comprueba tu contraseña actual y los datos introducidos.",
   "profilePartialSuccess": "Los datos personales se guardaron, pero la contraseña no se cambió.",
-  "profileUnexpectedError": "Ocurrió un error al guardar los cambios."
+  "profileUnexpectedError": "Ocurrió un error al guardar los cambios.",
+  "dashboardRegisteredBooks": "Libros registrados",
+  "dashboardMonthlyLoans": "Préstamos del mes",
+  "dashboardLastLoan": "Último préstamo realizado",
+  "dashboardNoLoansRecorded": "No hay préstamos registrados",
+  "dashboardNoLoansYet": "Todavía no hay préstamos.",
+  "dashboardMostBorrowedBook": "Libro más prestado del mes",
+  "dashboardNoBookFound": "No se encontró ningún libro",
+  "dashboardNoMonthlyLoans": "Aún no hay préstamos este mes.",
+  "dashboardLoanCount": "{count} préstamos",
+  "@dashboardLoanCount": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "dashboardTopThree": "Los 3 libros más prestados del mes",
+  "dashboardLoanRanking": "Clasificación de préstamos",
+  "dashboardNoMonthlyData": "No hay datos disponibles para este mes.",
+  "dashboardBorrowedBooks": "Libros prestados",
+  "dashboardNextReturn": "Próxima devolución",
+  "dashboardLastBorrowedBook": "Último libro prestado",
+  "dashboardNoBooks": "Ningún libro",
+  "dashboardMyLoans": "Mis libros prestados",
+  "dashboardNoLoansFound": "No se encontraron préstamos",
+  "dashboardLoansAppearHere": "Tus préstamos aparecerán aquí.",
+  "dashboardLoadError": "No se pudo cargar el panel."
 }

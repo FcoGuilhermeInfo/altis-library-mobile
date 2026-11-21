@@ -224,5 +224,30 @@
   "profileSaveError": "Não foi possível salvar as alterações.",
   "profilePasswordError": "Não foi possível alterar a senha. Confira a senha atual e os dados informados.",
   "profilePartialSuccess": "Os dados pessoais foram salvos, mas a senha não foi alterada.",
-  "profileUnexpectedError": "Ocorreu um erro ao salvar as alterações."
+  "profileUnexpectedError": "Ocorreu um erro ao salvar as alterações.",
+  "dashboardRegisteredBooks": "Livros cadastrados",
+  "dashboardMonthlyLoans": "Empréstimos do mês",
+  "dashboardLastLoan": "Último empréstimo realizado",
+  "dashboardNoLoansRecorded": "Nenhum empréstimo registrado",
+  "dashboardNoLoansYet": "Ainda não existem empréstimos.",
+  "dashboardMostBorrowedBook": "Livro mais emprestado do mês",
+  "dashboardNoBookFound": "Nenhum livro encontrado",
+  "dashboardNoMonthlyLoans": "Ainda não existem empréstimos neste mês.",
+  "dashboardLoanCount": "{count} empréstimos",
+  "@dashboardLoanCount": {
+    "placeholders": {
+      "count": {"type": "int"}
+    }
+  },
+  "dashboardTopThree": "Top 3 livros mais emprestados do mês",
+  "dashboardLoanRanking": "Ranking de empréstimos",
+  "dashboardNoMonthlyData": "Não há dados para este mês.",
+  "dashboardBorrowedBooks": "Livros emprestados",
+  "dashboardNextReturn": "Próxima devolução",
+  "dashboardLastBorrowedBook": "Último livro emprestado",
+  "dashboardNoBooks": "Nenhum livro",
+  "dashboardMyLoans": "Meus livros emprestados",
+  "dashboardNoLoansFound": "Nenhum empréstimo encontrado",
+  "dashboardLoansAppearHere": "Seus empréstimos aparecerão aqui.",
+  "dashboardLoadError": "Não foi possível carregar o dashboard."
 }

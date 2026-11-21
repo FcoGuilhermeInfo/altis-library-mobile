@@ -637,4 +637,67 @@ class AppLocalizationsPt extends AppLocalizations {
   @override
   String get profileUnexpectedError =>
       'Ocorreu um erro ao salvar as alterações.';
+
+  @override
+  String get dashboardRegisteredBooks => 'Livros cadastrados';
+
+  @override
+  String get dashboardMonthlyLoans => 'Empréstimos do mês';
+
+  @override
+  String get dashboardLastLoan => 'Último empréstimo realizado';
+
+  @override
+  String get dashboardNoLoansRecorded => 'Nenhum empréstimo registrado';
+
+  @override
+  String get dashboardNoLoansYet => 'Ainda não existem empréstimos.';
+
+  @override
+  String get dashboardMostBorrowedBook => 'Livro mais emprestado do mês';
+
+  @override
+  String get dashboardNoBookFound => 'Nenhum livro encontrado';
+
+  @override
+  String get dashboardNoMonthlyLoans =>
+      'Ainda não existem empréstimos neste mês.';
+
+  @override
+  String dashboardLoanCount(int count) {
+    return '$count empréstimos';
+  }
+
+  @override
+  String get dashboardTopThree => 'Top 3 livros mais emprestados do mês';
+
+  @override
+  String get dashboardLoanRanking => 'Ranking de empréstimos';
+
+  @override
+  String get dashboardNoMonthlyData => 'Não há dados para este mês.';
+
+  @override
+  String get dashboardBorrowedBooks => 'Livros emprestados';
+
+  @override
+  String get dashboardNextReturn => 'Próxima devolução';
+
+  @override
+  String get dashboardLastBorrowedBook => 'Último livro emprestado';
+
+  @override
+  String get dashboardNoBooks => 'Nenhum livro';
+
+  @override
+  String get dashboardMyLoans => 'Meus livros emprestados';
+
+  @override
+  String get dashboardNoLoansFound => 'Nenhum empréstimo encontrado';
+
+  @override
+  String get dashboardLoansAppearHere => 'Seus empréstimos aparecerão aqui.';
+
+  @override
+  String get dashboardLoadError => 'Não foi possível carregar o dashboard.';
 }

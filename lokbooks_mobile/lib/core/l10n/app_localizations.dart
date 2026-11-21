@@ -1275,6 +1275,126 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Ocorreu um erro ao salvar as alterações.'**
   String get profileUnexpectedError;
+
+  /// No description provided for @dashboardRegisteredBooks.
+  ///
+  /// In pt, this message translates to:
+  /// **'Livros cadastrados'**
+  String get dashboardRegisteredBooks;
+
+  /// No description provided for @dashboardMonthlyLoans.
+  ///
+  /// In pt, this message translates to:
+  /// **'Empréstimos do mês'**
+  String get dashboardMonthlyLoans;
+
+  /// No description provided for @dashboardLastLoan.
+  ///
+  /// In pt, this message translates to:
+  /// **'Último empréstimo realizado'**
+  String get dashboardLastLoan;
+
+  /// No description provided for @dashboardNoLoansRecorded.
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhum empréstimo registrado'**
+  String get dashboardNoLoansRecorded;
+
+  /// No description provided for @dashboardNoLoansYet.
+  ///
+  /// In pt, this message translates to:
+  /// **'Ainda não existem empréstimos.'**
+  String get dashboardNoLoansYet;
+
+  /// No description provided for @dashboardMostBorrowedBook.
+  ///
+  /// In pt, this message translates to:
+  /// **'Livro mais emprestado do mês'**
+  String get dashboardMostBorrowedBook;
+
+  /// No description provided for @dashboardNoBookFound.
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhum livro encontrado'**
+  String get dashboardNoBookFound;
+
+  /// No description provided for @dashboardNoMonthlyLoans.
+  ///
+  /// In pt, this message translates to:
+  /// **'Ainda não existem empréstimos neste mês.'**
+  String get dashboardNoMonthlyLoans;
+
+  /// No description provided for @dashboardLoanCount.
+  ///
+  /// In pt, this message translates to:
+  /// **'{count} empréstimos'**
+  String dashboardLoanCount(int count);
+
+  /// No description provided for @dashboardTopThree.
+  ///
+  /// In pt, this message translates to:
+  /// **'Top 3 livros mais emprestados do mês'**
+  String get dashboardTopThree;
+
+  /// No description provided for @dashboardLoanRanking.
+  ///
+  /// In pt, this message translates to:
+  /// **'Ranking de empréstimos'**
+  String get dashboardLoanRanking;
+
+  /// No description provided for @dashboardNoMonthlyData.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não há dados para este mês.'**
+  String get dashboardNoMonthlyData;
+
+  /// No description provided for @dashboardBorrowedBooks.
+  ///
+  /// In pt, this message translates to:
+  /// **'Livros emprestados'**
+  String get dashboardBorrowedBooks;
+
+  /// No description provided for @dashboardNextReturn.
+  ///
+  /// In pt, this message translates to:
+  /// **'Próxima devolução'**
+  String get dashboardNextReturn;
+
+  /// No description provided for @dashboardLastBorrowedBook.
+  ///
+  /// In pt, this message translates to:
+  /// **'Último livro emprestado'**
+  String get dashboardLastBorrowedBook;
+
+  /// No description provided for @dashboardNoBooks.
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhum livro'**
+  String get dashboardNoBooks;
+
+  /// No description provided for @dashboardMyLoans.
+  ///
+  /// In pt, this message translates to:
+  /// **'Meus livros emprestados'**
+  String get dashboardMyLoans;
+
+  /// No description provided for @dashboardNoLoansFound.
+  ///
+  /// In pt, this message translates to:
+  /// **'Nenhum empréstimo encontrado'**
+  String get dashboardNoLoansFound;
+
+  /// No description provided for @dashboardLoansAppearHere.
+  ///
+  /// In pt, this message translates to:
+  /// **'Seus empréstimos aparecerão aqui.'**
+  String get dashboardLoansAppearHere;
+
+  /// No description provided for @dashboardLoadError.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível carregar o dashboard.'**
+  String get dashboardLoadError;
 }
 
 class _AppLocalizationsDelegate
