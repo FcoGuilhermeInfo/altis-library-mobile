@@ -8,6 +8,7 @@ import '../../modules/auth/models/user_role.dart';
 import '../../modules/books/presentation/pages/books_page.dart';
 import '../../modules/home/presentation/pages/dashboard_page.dart';
 import '../../modules/loans/presentation/pages/loans_page.dart';
+import '../../modules/profile/presentation/pages/profile_page.dart';
 import '../../modules/publishers/presentation/pages/publishers_page.dart';
 import '../../modules/users/presentation/pages/users_page.dart';
 import 'app_header.dart';
@@ -40,13 +41,44 @@ class MainShell extends StatefulWidget {
 
 class _MainShellState extends State<MainShell> {
   AdminSection _selectedSection = AdminSection.dashboard;
+
+  bool _showingProfile = false;
   bool _isLoggingOut = false;
+
+  @override
+  void initState() {
+    super.initState();
+    widget.authController.addListener(_onAuthChanged);
+  }
+
+  @override
+  void didUpdateWidget(covariant MainShell oldWidget) {
+    super.didUpdateWidget(oldWidget);
+
+    if (oldWidget.authController != widget.authController) {
+      oldWidget.authController.removeListener(_onAuthChanged);
+      widget.authController.addListener(_onAuthChanged);
+    }
+  }
+
+  @override
+  void dispose() {
+    widget.authController.removeListener(_onAuthChanged);
+    super.dispose();
+  }
+
+  void _onAuthChanged() {
+    if (!mounted) return;
+
+    setState(() {});
+  }
 
   void _selectSection(AdminSection section) {
     Navigator.of(context).pop();
 
     setState(() {
       _selectedSection = section;
+      _showingProfile = false;
     });
   }
 
@@ -55,7 +87,8 @@ class _MainShellState extends State<MainShell> {
     required IconData icon,
     required String title,
   }) {
-    final selected = _selectedSection == section;
+    final selected =
+        !_showingProfile && _selectedSection == section;
 
     return ListTile(
       selected: selected,
@@ -77,29 +110,15 @@ class _MainShellState extends State<MainShell> {
     );
   }
 
-  Future<void> _showProfile() async {
-    final l10n = AppLocalizations.of(context)!;
+  void _openProfile() {
+    setState(() {
+      _showingProfile = true;
+    });
 
-    final roleLabel = switch (widget.authController.role) {
-      UserRole.admin => l10n.roleAdmin,
-      UserRole.user => l10n.roleUser,
-      null => '',
-    };
-
-    await showDialog<void>(
-      context: context,
-      builder: (dialogContext) => AlertDialog(
-        title: Text(l10n.menuProfile),
-        content: Text(roleLabel),
-        actions: [
-          TextButton(
-            onPressed: () =>
-                Navigator.of(dialogContext).pop(),
-            child: Text(l10n.actionClose),
-          ),
-        ],
-      ),
-    );
+    if (widget.authController.profile == null &&
+        !widget.authController.isLoadingProfile) {
+      widget.authController.refreshProfile();
+    }
   }
 
   Future<void> _changeLanguage() async {
@@ -130,7 +149,9 @@ class _MainShellState extends State<MainShell> {
       final l10n = AppLocalizations.of(context)!;
 
       ScaffoldMessenger.of(context).showSnackBar(
-        SnackBar(content: Text(l10n.logoutError)),
+        SnackBar(
+          content: Text(l10n.logoutError),
+        ),
       );
     } finally {
       if (mounted) {
@@ -144,18 +165,23 @@ class _MainShellState extends State<MainShell> {
   void _handleProfileAction(ProfileAction action) {
     switch (action) {
       case ProfileAction.profile:
-        _showProfile();
+        _openProfile();
+
       case ProfileAction.language:
         _changeLanguage();
+
       case ProfileAction.logout:
         _logout();
     }
   }
 
-  Widget _buildContent(
-    AppLocalizations l10n,
-    bool isAdmin,
-  ) {
+  Widget _buildContent(bool isAdmin) {
+    if (_showingProfile) {
+      return ProfilePage(
+        authController: widget.authController,
+      );
+    }
+
     if (!isAdmin) {
       return const DashboardPage();
     }
@@ -172,7 +198,9 @@ class _MainShellState extends State<MainShell> {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
-    final isAdmin = widget.authController.role == UserRole.admin;
+
+    final isAdmin =
+        widget.authController.role == UserRole.admin;
 
     final roleLabel = isAdmin
         ? l10n.roleAdmin
@@ -194,6 +222,7 @@ class _MainShellState extends State<MainShell> {
         ),
         actions: [
           ProfileMenu(
+            userName: widget.authController.userName,
             roleLabel: roleLabel,
             onSelected: _handleProfileAction,
           ),
@@ -258,7 +287,7 @@ class _MainShellState extends State<MainShell> {
           ),
         ),
       ),
-      body: _buildContent(l10n, isAdmin),
+      body: _buildContent(isAdmin),
     );
   }
 }

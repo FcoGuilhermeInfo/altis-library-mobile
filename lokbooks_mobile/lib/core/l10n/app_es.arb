@@ -199,5 +199,30 @@
       "end": {"type": "int"},
       "total": {"type": "int"}
     }
-  }
+  },
+  "profileEdit": "Editar perfil",
+  "profileSaveChanges": "Guardar cambios",
+  "profileLoadError": "No se pudo cargar el perfil.",
+  "profileSaveSuccess": "¡Cambios guardados correctamente!",
+  "profilePasswordSuccess": "¡Contraseña cambiada correctamente!",
+  "profileCurrentPassword": "Contraseña actual",
+  "profileNewPassword": "Nueva contraseña",
+  "profileConfirmPassword": "Confirmar contraseña",
+  "profileCurrentPasswordRequired": "Introduce tu contraseña actual.",
+  "profileNewPasswordRequired": "Introduce una nueva contraseña.",
+  "profileConfirmPasswordRequired": "Confirma tu nueva contraseña.",
+  "profilePasswordLength": "La nueva contraseña debe tener entre 8 y 15 caracteres.",
+  "profilePasswordMustDiffer": "La nueva contraseña debe ser diferente de la actual.",
+  "profilePasswordMismatch": "Las contraseñas no coinciden.",
+  "profileShowPassword": "Mostrar contraseña",
+  "profileHidePassword": "Ocultar contraseña",
+  "profilePhoneInvalid": "El teléfono debe contener 10 u 11 dígitos.",
+  "profileUnauthorized": "Tu autenticación no fue autorizada.",
+  "profileForbidden": "No tienes permiso para realizar este cambio.",
+  "profileInvalidData": "Comprueba los datos introducidos.",
+  "profileConnectionError": "No se pudo conectar con el servidor.",
+  "profileSaveError": "No se pudieron guardar los cambios.",
+  "profilePasswordError": "No se pudo cambiar la contraseña. Comprueba tu contraseña actual y los datos introducidos.",
+  "profilePartialSuccess": "Los datos personales se guardaron, pero la contraseña no se cambió.",
+  "profileUnexpectedError": "Ocurrió un error al guardar los cambios."
 }

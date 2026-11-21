@@ -10,548 +10,633 @@ class AppLocalizationsEn extends AppLocalizations {
   AppLocalizationsEn([String locale = 'en']) : super(locale);
 
   @override
-  String get loginTitle => 'Login';
+  String get loginTitle => 'Iniciar sesión';
 
   @override
-  String get loginEmail => 'Email';
+  String get loginEmail => 'Correo electrónico';
 
   @override
-  String get loginPassword => 'Password';
+  String get loginPassword => 'Contraseña';
 
   @override
-  String get loginSubmit => 'Sign in';
+  String get loginSubmit => 'Entrar';
 
   @override
-  String get loginForgotPassword => 'Forgot your password?';
+  String get loginForgotPassword => '¿Olvidaste tu contraseña?';
 
   @override
-  String get loginNoAccount => 'Don\'t have an account?';
+  String get loginNoAccount => '¿No tienes una cuenta?';
 
   @override
-  String get loginRegister => 'Sign up';
+  String get loginRegister => 'Regístrate';
 
   @override
-  String get loginEmailRequired => 'Enter your email';
+  String get loginEmailRequired => 'Introduce tu correo electrónico';
 
   @override
-  String get loginEmailInvalid => 'Enter a valid email address';
+  String get loginEmailInvalid => 'Introduce un correo electrónico válido';
 
   @override
-  String get loginPasswordRequired => 'Enter your password';
+  String get loginPasswordRequired => 'Introduce tu contraseña';
 
   @override
-  String get loginInvalidCredentials => 'Invalid email or password.';
+  String get loginInvalidCredentials => 'Correo o contraseña incorrectos.';
 
   @override
-  String get loginConnectionError => 'Could not connect to the server.';
+  String get loginConnectionError => 'No se pudo conectar con el servidor.';
 
   @override
-  String get loginServerError => 'Could not sign in. Please try again.';
+  String get loginServerError =>
+      'No se pudo iniciar sesión. Inténtalo de nuevo.';
 
   @override
-  String get loginAdminSuccess => 'Signed in as administrator.';
+  String get loginAdminSuccess => 'Sesión iniciada como administrador.';
 
   @override
-  String get loginUserSuccess => 'Signed in as library member.';
+  String get loginUserSuccess =>
+      'Sesión iniciada como usuario de la biblioteca.';
 
   @override
-  String get registerTitle => 'Register';
+  String get registerTitle => 'Registro';
 
   @override
-  String get registerName => 'Full name';
+  String get registerName => 'Nombre completo';
 
   @override
-  String get registerBirthDate => 'Date of birth';
+  String get registerBirthDate => 'Fecha de nacimiento';
 
   @override
   String get registerCpf => 'CPF';
 
   @override
-  String get registerPhone => 'Phone number';
+  String get registerPhone => 'Teléfono';
 
   @override
-  String get registerAddress => 'Address';
+  String get registerAddress => 'Dirección';
 
   @override
-  String get registerEmail => 'Email';
+  String get registerEmail => 'Correo electrónico';
 
   @override
-  String get registerPassword => 'Password';
+  String get registerPassword => 'Contraseña';
 
   @override
-  String get registerConfirmPassword => 'Confirm Password';
+  String get registerConfirmPassword => 'Confirmar contraseña';
 
   @override
-  String get registerSubmit => 'Sign in';
+  String get registerSubmit => 'Entrar';
 
   @override
-  String get registerBackToLogin => 'Already have an account?';
+  String get registerBackToLogin => '¿Ya tienes una cuenta?';
 
   @override
-  String get registerRequired => 'This field is required';
+  String get registerRequired => 'Este campo es obligatorio';
 
   @override
-  String get registerInvalidCpf => 'CPF must contain 11 digits';
+  String get registerInvalidCpf => 'El CPF debe contener 11 dígitos';
 
   @override
   String get registerInvalidPhone =>
-      'Enter an 11-digit mobile number with area code';
+      'Introduce un móvil de 11 dígitos con código de área';
 
   @override
-  String get registerInvalidDate => 'Enter a valid date of birth';
+  String get registerInvalidDate => 'Introduce una fecha de nacimiento válida';
 
   @override
-  String get registerInvalidEmail => 'Enter a valid Gmail address';
+  String get registerInvalidEmail => 'Introduce una dirección válida de Gmail';
 
   @override
   String get registerInvalidPassword =>
-      'Password must contain 8 to 15 characters';
+      'La contraseña debe tener entre 8 y 15 caracteres';
 
   @override
-  String get registerPasswordMismatch => 'Passwords do not match';
+  String get registerPasswordMismatch => 'Las contraseñas no coinciden';
 
   @override
-  String get registerSuccess => 'Registration successful! Please sign in.';
+  String get registerSuccess => '¡Registro completado! Inicia sesión.';
 
   @override
-  String get registerInvalidData =>
-      'Check the information provided and try again.';
+  String get registerInvalidData => 'Comprueba los datos e inténtalo de nuevo.';
 
   @override
   String get registerForbidden =>
-      'Registration is not available without authorization.';
+      'El registro no está disponible sin autorización.';
 
   @override
-  String get registerConflict =>
-      'An account with this information already exists.';
+  String get registerConflict => 'Ya existe una cuenta con estos datos.';
 
   @override
   String get registerServerError =>
-      'Could not complete registration. Please try again.';
+      'No se pudo completar el registro. Inténtalo de nuevo.';
 
   @override
-  String get forgotPasswordTitle => 'Recover Password';
+  String get forgotPasswordTitle => 'Recuperar Contraseña';
 
   @override
   String get forgotPasswordDescription =>
-      'Enter your registered email address and CPF to continue.';
+      'Introduce tu correo y CPF registrados para continuar.';
 
   @override
-  String get forgotPasswordSubmit => 'Continue';
+  String get forgotPasswordSubmit => 'Continuar';
 
   @override
   String get forgotPasswordInvalidCredentials =>
-      'We could not verify the information provided.';
+      'No pudimos verificar los datos proporcionados.';
 
   @override
   String get forgotPasswordInvalidData =>
-      'Check the email address and CPF provided.';
+      'Comprueba el correo y CPF introducidos.';
 
   @override
   String get passwordResetTooManyRequests =>
-      'Too many attempts. Wait and try again.';
+      'Demasiados intentos. Espera e inténtalo de nuevo.';
 
   @override
-  String get resetPasswordTitle => 'Change Password';
+  String get resetPasswordTitle => 'Cambiar Contraseña';
 
   @override
-  String get resetPasswordDescription => 'Enter and confirm your new password.';
+  String get resetPasswordDescription =>
+      'Introduce y confirma tu nueva contraseña.';
 
   @override
-  String get resetPasswordNewPassword => 'New Password';
+  String get resetPasswordNewPassword => 'Nueva Contraseña';
 
   @override
-  String get resetPasswordSubmit => 'Change';
+  String get resetPasswordSubmit => 'Cambiar';
 
   @override
   String get resetPasswordInvalidToken =>
-      'Your recovery session has expired or the token is invalid. Please request a new one.';
+      'La sesión de recuperación ha caducado o el token no es válido. Solicita uno nuevo.';
 
   @override
-  String get resetPasswordInvalidData => 'Check your new password information.';
+  String get resetPasswordInvalidData =>
+      'Comprueba los datos de la nueva contraseña.';
 
   @override
   String get resetPasswordSuccess =>
-      'Password reset successfully! Please sign in.';
+      '¡Contraseña restablecida correctamente! Inicia sesión.';
 
   @override
-  String get menuOpen => 'Open menu';
+  String get menuOpen => 'Abrir menú';
 
   @override
-  String get menuDashboard => 'Dashboard';
+  String get menuDashboard => 'Panel principal';
 
   @override
-  String get menuLoans => 'Loans';
+  String get menuLoans => 'Préstamos';
 
   @override
-  String get menuUsers => 'Users';
+  String get menuUsers => 'Usuarios';
 
   @override
-  String get menuPublishers => 'Publishers';
+  String get menuPublishers => 'Editoriales';
 
   @override
-  String get menuBooks => 'Books';
+  String get menuBooks => 'Libros';
 
   @override
-  String get menuProfile => 'Profile';
+  String get menuProfile => 'Perfil';
 
   @override
-  String get menuChangeLanguage => 'Change Language';
+  String get menuChangeLanguage => 'Cambiar idioma';
 
   @override
-  String get menuLogout => 'Log Out';
+  String get menuLogout => 'Cerrar sesión';
 
   @override
-  String get dashboardPlaceholder => 'Temporary Dashboard';
+  String get dashboardPlaceholder => 'Panel provisional';
 
   @override
-  String get moduleUnderDevelopment => 'Under development';
+  String get moduleUnderDevelopment => 'En desarrollo';
 
   @override
-  String get roleAdmin => 'Administrator';
+  String get roleAdmin => 'Administrador';
 
   @override
-  String get roleUser => 'Library member';
+  String get roleUser => 'Usuario de la biblioteca';
 
   @override
-  String get actionClose => 'Close';
+  String get actionClose => 'Cerrar';
 
   @override
-  String get logoutError => 'Could not log out. Please try again.';
+  String get logoutError => 'No se pudo cerrar la sesión. Inténtalo de nuevo.';
 
   @override
-  String get languageDialogTitle => 'Languages';
+  String get languageDialogTitle => 'Idiomas';
 
   @override
-  String get languageDialogSave => 'SAVE';
+  String get languageDialogSave => 'GUARDAR';
 
   @override
-  String get usersSearchHint => 'Search users by name';
+  String get usersSearchHint => 'Buscar usuarios por nombre';
 
   @override
-  String get usersName => 'Name';
+  String get usersName => 'Nombre';
 
   @override
   String get usersCpf => 'CPF';
 
   @override
-  String get usersStatus => 'Status';
+  String get usersStatus => 'Estado';
 
   @override
-  String get usersActive => 'Active';
+  String get usersActive => 'Activo';
 
   @override
-  String get usersInactive => 'Inactive';
+  String get usersInactive => 'Inactivo';
 
   @override
-  String get usersActions => 'User actions';
+  String get usersActions => 'Acciones del usuario';
 
   @override
-  String get usersPrevious => 'Previous';
+  String get usersPrevious => 'Anterior';
 
   @override
-  String get usersNext => 'Next';
+  String get usersNext => 'Siguiente';
 
   @override
   String usersShowing(int start, int end, int total) {
-    return 'Showing $start to $end of $total users';
+    return 'Mostrando de $start a $end de $total usuarios';
   }
 
   @override
-  String get usersEmpty => 'No users found.';
+  String get usersEmpty => 'No se encontraron usuarios.';
 
   @override
-  String get usersRetry => 'Try again';
+  String get usersRetry => 'Intentar de nuevo';
 
   @override
-  String get usersLoadError => 'Could not load users.';
+  String get usersLoadError => 'No se pudieron cargar los usuarios.';
 
   @override
   String get usersUnauthorized =>
-      'Your session has expired. Please sign in again.';
+      'Tu sesión ha caducado. Inicia sesión de nuevo.';
 
   @override
-  String get usersForbidden =>
-      'You do not have permission to access this feature.';
+  String get usersForbidden => 'No tienes permiso para acceder a esta función.';
 
   @override
-  String get usersActivate => 'Activate member';
+  String get usersActivate => 'Activar usuario';
 
   @override
-  String get usersInactivate => 'Deactivate member';
+  String get usersInactivate => 'Desactivar usuario';
 
   @override
-  String get usersConfirmActivate => 'Do you want to activate this member?';
+  String get usersConfirmActivate => '¿Quieres activar este usuario?';
 
   @override
-  String get usersConfirmInactivate => 'Do you want to deactivate this member?';
+  String get usersConfirmInactivate => '¿Quieres desactivar este usuario?';
 
   @override
-  String get usersCancel => 'Cancel';
+  String get usersCancel => 'Cancelar';
 
   @override
-  String get usersConfirm => 'Confirm';
+  String get usersConfirm => 'Confirmar';
 
   @override
-  String get usersStatusUpdated => 'Status updated successfully.';
+  String get usersStatusUpdated => 'Estado actualizado correctamente.';
 
   @override
-  String get usersDetailsTitle => 'View details';
+  String get usersDetailsTitle => 'Ver detalles';
 
   @override
-  String get usersViewDetails => 'View details';
+  String get usersViewDetails => 'Ver detalles';
 
   @override
-  String get usersCreatedAt => 'Created on';
+  String get usersCreatedAt => 'Fecha de creación';
 
   @override
-  String get usersUpdatedAt => 'Last updated';
+  String get usersUpdatedAt => 'Última actualización';
 
   @override
-  String get publishersSearch => 'Search publishers by name';
+  String get publishersSearch => 'Buscar editoriales por nombre';
 
   @override
-  String get publishersNew => 'Register new publisher';
+  String get publishersNew => 'Registrar nueva editorial';
 
   @override
-  String get publishersCreateTitle => 'Register Publisher';
+  String get publishersCreateTitle => 'Registrar Editorial';
 
   @override
-  String get publishersEditTitle => 'Edit Publisher';
+  String get publishersEditTitle => 'Editar Editorial';
 
   @override
-  String get publishersSite => 'Website';
+  String get publishersSite => 'Sitio web';
 
   @override
-  String get publishersCreate => 'Register';
+  String get publishersCreate => 'Registrar';
 
   @override
-  String get publishersEdit => 'Edit';
+  String get publishersEdit => 'Editar';
 
   @override
-  String get publishersDelete => 'Delete Publisher';
+  String get publishersDelete => 'Eliminar Editorial';
 
   @override
   String get publishersDeleteConfirmation =>
-      'Are you sure you want to delete this publisher?';
+      '¿Seguro que quieres eliminar esta editorial?';
 
   @override
   String get publishersDeleteConflict =>
-      'A publisher with related books cannot be deleted.';
+      'No se puede eliminar una editorial con libros relacionados.';
 
   @override
-  String get publishersInvalidData => 'Check the publisher information.';
+  String get publishersInvalidData => 'Comprueba los datos de la editorial.';
 
   @override
   String get publishersInvalidPhone =>
-      'Enter a valid phone number with area code.';
+      'Introduce un teléfono válido con código de área.';
 
   @override
-  String get publishersInvalidSite => 'Enter a valid website address.';
+  String get publishersInvalidSite => 'Introduce una dirección web válida.';
 
   @override
   String get publishersConflict =>
-      'The operation could not be completed due to a conflict.';
+      'No se pudo completar la operación debido a un conflicto.';
 
   @override
-  String get publishersNotFound => 'Publisher not found.';
+  String get publishersNotFound => 'Editorial no encontrada.';
 
   @override
-  String get publishersError => 'Could not complete the publisher operation.';
+  String get publishersError =>
+      'No se pudo completar la operación con la editorial.';
 
   @override
-  String get publishersEmpty => 'No publishers found.';
+  String get publishersEmpty => 'No se encontraron editoriales.';
 
   @override
-  String get publishersSuccess => 'Operation completed successfully.';
+  String get publishersSuccess => 'Operación completada correctamente.';
 
   @override
   String publishersShowing(int start, int end, int total) {
-    return 'Showing $start to $end of $total publishers';
+    return 'Mostrando de $start a $end de $total editoriales';
   }
 
   @override
-  String get booksSearch => 'Search books by title';
+  String get booksSearch => 'Buscar libros por título';
 
   @override
-  String get booksNew => 'Register new book';
+  String get booksNew => 'Registrar nuevo libro';
 
   @override
-  String get booksCreateTitle => 'Register Book';
+  String get booksCreateTitle => 'Registrar Libro';
 
   @override
-  String get booksEditTitle => 'Edit Book';
+  String get booksEditTitle => 'Editar Libro';
 
   @override
-  String get booksTitle => 'Title';
+  String get booksTitle => 'Título';
 
   @override
-  String get booksAuthor => 'Author';
+  String get booksAuthor => 'Autor';
 
   @override
-  String get booksYear => 'Year';
+  String get booksYear => 'Año';
 
   @override
-  String get booksPublisher => 'Publisher';
+  String get booksPublisher => 'Editorial';
 
   @override
-  String get booksTotalQuantity => 'Total quantity';
+  String get booksTotalQuantity => 'Cantidad total';
 
   @override
   String get booksTotalShort => 'Total';
 
   @override
-  String get booksAvailableShort => 'Available';
+  String get booksAvailableShort => 'Disponible';
 
   @override
-  String get booksBorrowedShort => 'Borrowed';
+  String get booksBorrowedShort => 'Prestada';
 
   @override
-  String get booksCreate => 'Register';
+  String get booksCreate => 'Registrar';
 
   @override
-  String get booksEdit => 'Edit';
+  String get booksEdit => 'Editar';
 
   @override
-  String get booksDelete => 'Delete Book';
+  String get booksDelete => 'Eliminar Libro';
 
   @override
   String get booksDeleteConfirmation =>
-      'Are you sure you want to delete this book?';
+      '¿Seguro que quieres eliminar este libro?';
 
   @override
   String get booksDeleteConflict =>
-      'A book with related loans cannot be deleted.';
+      'No se puede eliminar un libro que tenga préstamos relacionados.';
 
   @override
-  String get booksInvalidData => 'Check the book information.';
+  String get booksInvalidData => 'Comprueba los datos del libro.';
 
   @override
-  String get booksInvalidYear => 'Enter a year between 1 and 32767.';
+  String get booksInvalidYear => 'Introduce un año entre 1 y 32767.';
 
   @override
   String get booksInvalidQuantity =>
-      'The total quantity must be greater than zero.';
+      'La cantidad total debe ser mayor que cero.';
 
   @override
   String get booksQuantityBelowBorrowed =>
-      'The total quantity cannot be less than the borrowed quantity.';
+      'La cantidad total no puede ser inferior a la cantidad prestada.';
 
   @override
-  String get booksPublisherLoadError => 'Could not load publishers.';
+  String get booksPublisherLoadError =>
+      'No se pudieron cargar las editoriales.';
 
   @override
   String get booksConflict =>
-      'This book may already exist or there is a conflict with the provided information.';
+      'Este libro puede estar registrado o existe un conflicto con los datos proporcionados.';
 
   @override
-  String get booksNotFound => 'Book not found.';
+  String get booksNotFound => 'Libro no encontrado.';
 
   @override
-  String get booksError => 'Could not complete the book operation.';
+  String get booksError => 'No se pudo completar la operación con el libro.';
 
   @override
-  String get booksEmpty => 'No books found.';
+  String get booksEmpty => 'No se encontraron libros.';
 
   @override
-  String get booksSuccess => 'Operation completed successfully.';
+  String get booksSuccess => 'Operación completada correctamente.';
 
   @override
   String booksShowing(int start, int end, int total) {
-    return 'Showing $start to $end of $total books';
+    return 'Mostrando de $start a $end de $total libros';
   }
 
   @override
-  String get loansSearch => 'Search loans by member';
+  String get loansSearch => 'Buscar préstamos por usuario';
 
   @override
-  String get loansNew => 'Register new loan';
+  String get loansNew => 'Registrar nuevo préstamo';
 
   @override
-  String get loansCreateTitle => 'Create Loan';
+  String get loansCreateTitle => 'Realizar Préstamo';
 
   @override
-  String get loansCreate => 'Create Loan';
+  String get loansCreate => 'Realizar Préstamo';
 
   @override
-  String get loansDetailsTitle => 'Loan Details';
+  String get loansDetailsTitle => 'Detalles del Préstamo';
 
   @override
-  String get loansViewDetails => 'View details';
+  String get loansViewDetails => 'Ver detalles';
 
   @override
-  String get loansMember => 'Library member';
+  String get loansMember => 'Usuario';
 
   @override
-  String get loansBook => 'Book';
+  String get loansBook => 'Libro';
 
   @override
-  String get loansBorrowedAt => 'Loan Date';
+  String get loansBorrowedAt => 'Fecha del Préstamo';
 
   @override
-  String get loansDueDate => 'Expected Return';
+  String get loansDueDate => 'Devolución Prevista';
 
   @override
-  String get loansReturnedAt => 'Return Date';
+  String get loansReturnedAt => 'Fecha de Devolución';
 
   @override
-  String get loansSelectDate => 'Select a date';
+  String get loansSelectDate => 'Selecciona una fecha';
 
   @override
-  String get loansBorrowed => 'Borrowed';
+  String get loansBorrowed => 'Prestado';
 
   @override
-  String get loansOverdue => 'Overdue';
+  String get loansOverdue => 'Atrasado';
 
   @override
-  String get loansReturned => 'Completed';
+  String get loansReturned => 'Finalizado';
 
   @override
-  String get loansUnknown => 'Unknown';
+  String get loansUnknown => 'Desconocido';
 
   @override
-  String get loansReturn => 'Confirm Return';
+  String get loansReturn => 'Confirmar Devolución';
 
   @override
   String get loansReturnConfirmation =>
-      'Do you want to confirm the return of this book?';
+      '¿Quieres confirmar la devolución de este libro?';
 
   @override
-  String get loansRecentTitle => 'Recent Completed Loans';
+  String get loansRecentTitle => 'Últimos Préstamos Realizados';
 
   @override
-  String get loansFullHistory => 'View full history';
+  String get loansFullHistory => 'Ver historial completo';
 
   @override
-  String get loansHistoryTitle => 'Loan History';
+  String get loansHistoryTitle => 'Historial de Préstamos';
 
   @override
-  String get loansEmptyHistory => 'No completed loans found.';
+  String get loansEmptyHistory => 'No hay préstamos finalizados.';
 
   @override
-  String get loansEmpty => 'No active loans found.';
+  String get loansEmpty => 'No se encontraron préstamos activos.';
 
   @override
-  String get loansOptionsLoadError => 'Could not load members and books.';
+  String get loansOptionsLoadError =>
+      'No se pudieron cargar usuarios y libros.';
 
   @override
-  String get loansInvalidDueDate =>
-      'The expected return date must be in the future.';
+  String get loansInvalidDueDate => 'La devolución prevista debe ser futura.';
 
   @override
-  String get loansNotFound => 'Loan not found.';
+  String get loansNotFound => 'Préstamo no encontrado.';
 
   @override
-  String get loansOperationError => 'Could not complete the operation.';
+  String get loansOperationError => 'No se pudo completar la operación.';
 
   @override
-  String get loansCreatedSuccess => 'Loan registered successfully.';
+  String get loansCreatedSuccess => 'Préstamo registrado correctamente.';
 
   @override
-  String get loansReturnedSuccess => 'Return confirmed successfully.';
+  String get loansReturnedSuccess => 'Devolución confirmada correctamente.';
 
   @override
   String loansShowing(int start, int end, int total) {
-    return 'Showing $start to $end of $total loans';
+    return 'Mostrando de $start a $end de $total préstamos';
   }
+
+  @override
+  String get profileEdit => 'Editar perfil';
+
+  @override
+  String get profileSaveChanges => 'Guardar cambios';
+
+  @override
+  String get profileLoadError => 'No se pudo cargar el perfil.';
+
+  @override
+  String get profileSaveSuccess => '¡Cambios guardados correctamente!';
+
+  @override
+  String get profilePasswordSuccess => '¡Contraseña cambiada correctamente!';
+
+  @override
+  String get profileCurrentPassword => 'Contraseña actual';
+
+  @override
+  String get profileNewPassword => 'Nueva contraseña';
+
+  @override
+  String get profileConfirmPassword => 'Confirmar contraseña';
+
+  @override
+  String get profileCurrentPasswordRequired =>
+      'Introduce tu contraseña actual.';
+
+  @override
+  String get profileNewPasswordRequired => 'Introduce una nueva contraseña.';
+
+  @override
+  String get profileConfirmPasswordRequired => 'Confirma tu nueva contraseña.';
+
+  @override
+  String get profilePasswordLength =>
+      'La nueva contraseña debe tener entre 8 y 15 caracteres.';
+
+  @override
+  String get profilePasswordMustDiffer =>
+      'La nueva contraseña debe ser diferente de la actual.';
+
+  @override
+  String get profilePasswordMismatch => 'Las contraseñas no coinciden.';
+
+  @override
+  String get profileShowPassword => 'Mostrar contraseña';
+
+  @override
+  String get profileHidePassword => 'Ocultar contraseña';
+
+  @override
+  String get profilePhoneInvalid =>
+      'El teléfono debe contener 10 u 11 dígitos.';
+
+  @override
+  String get profileUnauthorized => 'Tu autenticación no fue autorizada.';
+
+  @override
+  String get profileForbidden => 'No tienes permiso para realizar este cambio.';
+
+  @override
+  String get profileInvalidData => 'Comprueba los datos introducidos.';
+
+  @override
+  String get profileConnectionError => 'No se pudo conectar con el servidor.';
+
+  @override
+  String get profileSaveError => 'No se pudieron guardar los cambios.';
+
+  @override
+  String get profilePasswordError =>
+      'No se pudo cambiar la contraseña. Comprueba tu contraseña actual y los datos introducidos.';
+
+  @override
+  String get profilePartialSuccess =>
+      'Los datos personales se guardaron, pero la contraseña no se cambió.';
+
+  @override
+  String get profileUnexpectedError =>
+      'Ocurrió un error al guardar los cambios.';
 }

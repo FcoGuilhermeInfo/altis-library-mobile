@@ -557,4 +557,86 @@ class AppLocalizationsEs extends AppLocalizations {
   String loansShowing(int start, int end, int total) {
     return 'Mostrando de $start a $end de $total préstamos';
   }
+
+  @override
+  String get profileEdit => 'Editar perfil';
+
+  @override
+  String get profileSaveChanges => 'Guardar cambios';
+
+  @override
+  String get profileLoadError => 'No se pudo cargar el perfil.';
+
+  @override
+  String get profileSaveSuccess => '¡Cambios guardados correctamente!';
+
+  @override
+  String get profilePasswordSuccess => '¡Contraseña cambiada correctamente!';
+
+  @override
+  String get profileCurrentPassword => 'Contraseña actual';
+
+  @override
+  String get profileNewPassword => 'Nueva contraseña';
+
+  @override
+  String get profileConfirmPassword => 'Confirmar contraseña';
+
+  @override
+  String get profileCurrentPasswordRequired =>
+      'Introduce tu contraseña actual.';
+
+  @override
+  String get profileNewPasswordRequired => 'Introduce una nueva contraseña.';
+
+  @override
+  String get profileConfirmPasswordRequired => 'Confirma tu nueva contraseña.';
+
+  @override
+  String get profilePasswordLength =>
+      'La nueva contraseña debe tener entre 8 y 15 caracteres.';
+
+  @override
+  String get profilePasswordMustDiffer =>
+      'La nueva contraseña debe ser diferente de la actual.';
+
+  @override
+  String get profilePasswordMismatch => 'Las contraseñas no coinciden.';
+
+  @override
+  String get profileShowPassword => 'Mostrar contraseña';
+
+  @override
+  String get profileHidePassword => 'Ocultar contraseña';
+
+  @override
+  String get profilePhoneInvalid =>
+      'El teléfono debe contener 10 u 11 dígitos.';
+
+  @override
+  String get profileUnauthorized => 'Tu autenticación no fue autorizada.';
+
+  @override
+  String get profileForbidden => 'No tienes permiso para realizar este cambio.';
+
+  @override
+  String get profileInvalidData => 'Comprueba los datos introducidos.';
+
+  @override
+  String get profileConnectionError => 'No se pudo conectar con el servidor.';
+
+  @override
+  String get profileSaveError => 'No se pudieron guardar los cambios.';
+
+  @override
+  String get profilePasswordError =>
+      'No se pudo cambiar la contraseña. Comprueba tu contraseña actual y los datos introducidos.';
+
+  @override
+  String get profilePartialSuccess =>
+      'Los datos personales se guardaron, pero la contraseña no se cambió.';
+
+  @override
+  String get profileUnexpectedError =>
+      'Ocurrió un error al guardar los cambios.';
 }
