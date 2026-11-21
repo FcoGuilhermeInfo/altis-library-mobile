@@ -199,5 +199,30 @@
       "end": {"type": "int"},
       "total": {"type": "int"}
     }
-  }
+  },
+  "profileEdit": "Editar Perfil",
+  "profileSaveChanges": "Salvar Alterações",
+  "profileLoadError": "Não foi possível carregar o perfil.",
+  "profileSaveSuccess": "Alterações salvas com sucesso!",
+  "profilePasswordSuccess": "Senha alterada com sucesso!",
+  "profileCurrentPassword": "Senha Atual",
+  "profileNewPassword": "Nova Senha",
+  "profileConfirmPassword": "Confirmar Senha",
+  "profileCurrentPasswordRequired": "Informe sua senha atual.",
+  "profileNewPasswordRequired": "Informe a nova senha.",
+  "profileConfirmPasswordRequired": "Confirme sua nova senha.",
+  "profilePasswordLength": "A nova senha deve ter entre 8 e 15 caracteres.",
+  "profilePasswordMustDiffer": "A nova senha deve ser diferente da atual.",
+  "profilePasswordMismatch": "As senhas não coincidem.",
+  "profileShowPassword": "Mostrar senha",
+  "profileHidePassword": "Ocultar senha",
+  "profilePhoneInvalid": "O telefone deve conter 10 ou 11 números.",
+  "profileUnauthorized": "Sua autenticação não foi autorizada.",
+  "profileForbidden": "Você não tem permissão para realizar esta alteração.",
+  "profileInvalidData": "Verifique os dados informados.",
+  "profileConnectionError": "Não foi possível conectar ao servidor.",
+  "profileSaveError": "Não foi possível salvar as alterações.",
+  "profilePasswordError": "Não foi possível alterar a senha. Confira a senha atual e os dados informados.",
+  "profilePartialSuccess": "Os dados pessoais foram salvos, mas a senha não foi alterada.",
+  "profileUnexpectedError": "Ocorreu um erro ao salvar as alterações."
 }

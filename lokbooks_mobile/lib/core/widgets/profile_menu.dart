@@ -11,11 +11,13 @@ enum ProfileAction {
 }
 
 class ProfileMenu extends StatelessWidget {
+  final String? userName;
   final String roleLabel;
   final ValueChanged<ProfileAction> onSelected;
 
   const ProfileMenu({
     super.key,
+    this.userName,
     required this.roleLabel,
     required this.onSelected,
   });
@@ -23,6 +25,11 @@ class ProfileMenu extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     final l10n = AppLocalizations.of(context)!;
+
+    final displayName = userName != null &&
+            userName!.trim().isNotEmpty
+        ? userName!.trim()
+        : roleLabel;
 
     return PopupMenuButton<ProfileAction>(
       tooltip: l10n.menuProfile,
@@ -45,9 +52,10 @@ class ProfileMenu extends StatelessWidget {
       itemBuilder: (context) => [
         PopupMenuItem<ProfileAction>(
           enabled: false,
-          height: 90,
+          height: 95,
           child: Center(
             child: Column(
+              mainAxisSize: MainAxisSize.min,
               children: [
                 const Icon(
                   Icons.account_circle,
@@ -56,7 +64,10 @@ class ProfileMenu extends StatelessWidget {
                 ),
                 const SizedBox(height: 6),
                 Text(
-                  roleLabel,
+                  displayName,
+                  textAlign: TextAlign.center,
+                  maxLines: 2,
+                  overflow: TextOverflow.ellipsis,
                   style: const TextStyle(
                     color: Colors.white,
                     fontWeight: FontWeight.bold,
@@ -104,11 +115,6 @@ class ProfileMenu extends StatelessWidget {
             ],
           ),
         ),
-        const PopupMenuItem<ProfileAction>(
-          enabled: false,
-          height: 75,
-          child: SizedBox.shrink(),
-        ),
         PopupMenuItem<ProfileAction>(
           value: ProfileAction.logout,
           child: Row(
@@ -131,3 +137,4 @@ class ProfileMenu extends StatelessWidget {
     );
   }
 }
+  

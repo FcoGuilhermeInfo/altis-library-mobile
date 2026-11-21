@@ -1125,6 +1125,156 @@ abstract class AppLocalizations {
   /// In pt, this message translates to:
   /// **'Mostrando {start} a {end} de {total} empréstimos'**
   String loansShowing(int start, int end, int total);
+
+  /// No description provided for @profileEdit.
+  ///
+  /// In pt, this message translates to:
+  /// **'Editar Perfil'**
+  String get profileEdit;
+
+  /// No description provided for @profileSaveChanges.
+  ///
+  /// In pt, this message translates to:
+  /// **'Salvar Alterações'**
+  String get profileSaveChanges;
+
+  /// No description provided for @profileLoadError.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível carregar o perfil.'**
+  String get profileLoadError;
+
+  /// No description provided for @profileSaveSuccess.
+  ///
+  /// In pt, this message translates to:
+  /// **'Alterações salvas com sucesso!'**
+  String get profileSaveSuccess;
+
+  /// No description provided for @profilePasswordSuccess.
+  ///
+  /// In pt, this message translates to:
+  /// **'Senha alterada com sucesso!'**
+  String get profilePasswordSuccess;
+
+  /// No description provided for @profileCurrentPassword.
+  ///
+  /// In pt, this message translates to:
+  /// **'Senha Atual'**
+  String get profileCurrentPassword;
+
+  /// No description provided for @profileNewPassword.
+  ///
+  /// In pt, this message translates to:
+  /// **'Nova Senha'**
+  String get profileNewPassword;
+
+  /// No description provided for @profileConfirmPassword.
+  ///
+  /// In pt, this message translates to:
+  /// **'Confirmar Senha'**
+  String get profileConfirmPassword;
+
+  /// No description provided for @profileCurrentPasswordRequired.
+  ///
+  /// In pt, this message translates to:
+  /// **'Informe sua senha atual.'**
+  String get profileCurrentPasswordRequired;
+
+  /// No description provided for @profileNewPasswordRequired.
+  ///
+  /// In pt, this message translates to:
+  /// **'Informe a nova senha.'**
+  String get profileNewPasswordRequired;
+
+  /// No description provided for @profileConfirmPasswordRequired.
+  ///
+  /// In pt, this message translates to:
+  /// **'Confirme sua nova senha.'**
+  String get profileConfirmPasswordRequired;
+
+  /// No description provided for @profilePasswordLength.
+  ///
+  /// In pt, this message translates to:
+  /// **'A nova senha deve ter entre 8 e 15 caracteres.'**
+  String get profilePasswordLength;
+
+  /// No description provided for @profilePasswordMustDiffer.
+  ///
+  /// In pt, this message translates to:
+  /// **'A nova senha deve ser diferente da atual.'**
+  String get profilePasswordMustDiffer;
+
+  /// No description provided for @profilePasswordMismatch.
+  ///
+  /// In pt, this message translates to:
+  /// **'As senhas não coincidem.'**
+  String get profilePasswordMismatch;
+
+  /// No description provided for @profileShowPassword.
+  ///
+  /// In pt, this message translates to:
+  /// **'Mostrar senha'**
+  String get profileShowPassword;
+
+  /// No description provided for @profileHidePassword.
+  ///
+  /// In pt, this message translates to:
+  /// **'Ocultar senha'**
+  String get profileHidePassword;
+
+  /// No description provided for @profilePhoneInvalid.
+  ///
+  /// In pt, this message translates to:
+  /// **'O telefone deve conter 10 ou 11 números.'**
+  String get profilePhoneInvalid;
+
+  /// No description provided for @profileUnauthorized.
+  ///
+  /// In pt, this message translates to:
+  /// **'Sua autenticação não foi autorizada.'**
+  String get profileUnauthorized;
+
+  /// No description provided for @profileForbidden.
+  ///
+  /// In pt, this message translates to:
+  /// **'Você não tem permissão para realizar esta alteração.'**
+  String get profileForbidden;
+
+  /// No description provided for @profileInvalidData.
+  ///
+  /// In pt, this message translates to:
+  /// **'Verifique os dados informados.'**
+  String get profileInvalidData;
+
+  /// No description provided for @profileConnectionError.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível conectar ao servidor.'**
+  String get profileConnectionError;
+
+  /// No description provided for @profileSaveError.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível salvar as alterações.'**
+  String get profileSaveError;
+
+  /// No description provided for @profilePasswordError.
+  ///
+  /// In pt, this message translates to:
+  /// **'Não foi possível alterar a senha. Confira a senha atual e os dados informados.'**
+  String get profilePasswordError;
+
+  /// No description provided for @profilePartialSuccess.
+  ///
+  /// In pt, this message translates to:
+  /// **'Os dados pessoais foram salvos, mas a senha não foi alterada.'**
+  String get profilePartialSuccess;
+
+  /// No description provided for @profileUnexpectedError.
+  ///
+  /// In pt, this message translates to:
+  /// **'Ocorreu um erro ao salvar as alterações.'**
+  String get profileUnexpectedError;
 }
 
 class _AppLocalizationsDelegate
